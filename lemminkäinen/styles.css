@@ -1,0 +1,90 @@
+header{
+    margin-left: 44%; 
+    margin-right: 37%;
+    font-family:'Courier New', Courier, monospace; 
+}
+footer{
+    background-color: #05386B;
+    color: aliceblue;
+    height: cover;
+    
+    position:absolute left;
+}
+.nav-item:hover{
+    background-color: rgb(0, 97, 97);
+    color:snow;
+}
+img{
+    width: 80vh;
+    margin:auto;
+    padding: 20px;
+    border-radius: 20%;
+    float: inherit;
+}
+div{
+    float: center;
+    border-color: aliceblue;
+    border-radius: 10px;
+}
+ #maski, #meikki, #piirros, #valokuvaus{
+    background-color: aliceblue;
+    border-color: #05386B;
+    border-style: solid;
+    padding:10px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 25px;
+    font-family:'Courier New', Courier, monospace;
+    color: #05386B;
+}
+.otsikko{
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 50em inherit;
+    color:#05386B;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+.intro, .nimi{
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 2em inherit;
+    color: #05386B;
+    background-color:aliceblue;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    float: inherit;
+}
+body{
+    background-image: url(../Bootstrap.Tehtävä/picture/abstract-1779612_960_720.png);
+    background-repeat: no-repeat;
+    background-size: 200em;
+}
+.carousel-inner img, .carousel {
+    margin: auto;
+    border-radius:10px;
+    border-color: #05386B;
+    width: 75%;
+    padding: 5px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+@media screen and (max-width: 500px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+
+  
