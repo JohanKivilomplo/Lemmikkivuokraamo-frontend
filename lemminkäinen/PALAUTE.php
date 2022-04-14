@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>LEMMINKAINEN</title>
+</head>
+<body>
+  <header>
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../lemminkäinen/index.html">ETUSIVU</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../lemminkäinen/eläimet.html">ELÄIMET</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../lemminkäinen/PALAUTE.html">PALAUTE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../lemminkäinen/oheistuotteet.html">OHEISTUOTTEET</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="../lemminkäinen/kamppanja.html">KAMPPANJAT</a>
+          </li>
+      </ul>
+  </header>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <div class="h3">
+        Anna meille palautetta!
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="etunimi">Etunimi</label>
+            <input type="text" class="form-control" id="etunimi" placeholder="Etunimi">
+          </div>
+          <div class="form-group">
+            <label for="sukunimi">Sukunimi</label>
+            <input type="text" class="form-control" id="sukunimi" placeholder="Sukunimi">
+          </div>
+          <div class="form-group">
+            <label for="email">Sähköposti</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Syötä sähköpostiosoitteesi">
+          </div>
+          <div class="form-group">
+            <label for="phone">Puhelinnumero</label>
+            <input type="tel" class="form-control" id="phonenumber" placeholder="Puhelinnumero">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Palaute</label>
+            <textarea class="form-control" id="palautelaatikko" rows="3" placeholder="Anna meille palautetta..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary m-2">Lähetä</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <p>
+        Made by :  OAMK TIETOJENKÄSITTELY 12/2021 
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
