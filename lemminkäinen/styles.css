@@ -67,6 +67,9 @@ body{
       width: 100%;
     }
   }
+
+/* Eläin-sivun cards-laatikot */
+
 .elain {
     text-align: center;
     font-family:'Courier New', Courier, monospace;
@@ -76,5 +79,34 @@ body{
     padding-bottom: 10px;
     border-radius: 10px;
     float: inherit;  
+    float: left;
 }
-  
+
+.card {
+    margin-left: 40px;
+    margin-right: 40px;
+    float: left;
+}
+
+.cards {
+    display: flex;
+}
+
+.card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 3px 3px 12px 2px rgba(black, 0.6);
+    transition: 0.2s;
+}
+
+.card:not(:first-child) {
+    margin-left: -2rem;
+}
+
+.card:not(:last-child):hover,
+.card:not(:last-child):focus-within {
+    transform: translateY(-1rem);
+    ~ .card {
+    transform: translateX(2rem);
+}
