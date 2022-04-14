@@ -17,17 +17,18 @@ CREATE table ASIAKAS (
 );
 
 CREATE TABLE LAJI (
-    lajinimi INT PRIMARY KEY AUTO_INCREMENT,
-    lajinro VARCHAR(255)
+    lajinro INT PRIMARY KEY AUTO_INCREMENT,
+    lajinimi VARCHAR(255)
 );
 
 CREATE TABLE ELAIN (
     elainID INT PRIMARY KEY AUTO_INCREMENT,
-    lajinro VARCHAR(255) NOT NULL,
+    lajinro INT NOT NULL,
     hinta INT NOT NULL,
     tietoa TEXT NOT NULL,
     rotu TEXT NOT NULL,
-    UNIQUE(elainID)
+    UNIQUE(elainID),
+FOREIGN KEY (lajinro) REFERENCES LAJI(lajinro)
 );
 
 CREATE table VUOKRA (
@@ -61,8 +62,30 @@ CREATE Table palaute (
 
 CREATE Table oheistuotteet (
     tuote TEXT NOT NULL,
+    hinta INT NOT NULL,
     maara INT NOT NULL,
     elainID INT NOT NULL,
     info TEXT,
     FOREIGN KEY (elainID) REFERENCES ELAIN(elainID)
 );
+
+INSERT INTO LAJI(lajinimi)
+    VALUES
+    ("Koirat"),
+    ("Kissat"),
+    ("Kilpikonnat"),
+    ("Linnut"),
+    ("Lampaat & vuohet"),
+    ("Hevoset ja ponit")
+;
+INSERT INTO ELAIN(rotu, hinta, tietoa, lajinro)
+    VALUES
+    ("Kultainennoutaja", "30", "Nimi : CARITA",1),
+    ("Sfinx", "30", "Nimi: JOHAN",2),
+    ("Ragdoll", "30", "Nimi: LIISA",2),
+    ("Shetlanninponi", "100", "Nimi: JONI",6),
+    ("Mäyräkoira", "30", "Nimi: BENJAMIN",1),
+    ("Nelivarvaskilpikonna", "40", "Nimi:  MUIKEA-MARKO", 3),
+    ("Punakorvakilpikonna", "40", "Nimi:  KOVA-KALLE", 3)
+
+;
