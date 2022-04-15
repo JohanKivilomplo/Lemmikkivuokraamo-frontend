@@ -39,7 +39,7 @@ http://localhost/Lemmikkivuokraamo-frontend/lemmink%C3%A4inen/oheistuotteet.php
           $products = getProducts();
 
           foreach($products as $p){
-          echo "<div>".$p["tuote"]." ".$p["hinta"]. $p["info"] . '</div>';
+          echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . '</div>'. "</br>";
           }
         ?>
       </ul>
