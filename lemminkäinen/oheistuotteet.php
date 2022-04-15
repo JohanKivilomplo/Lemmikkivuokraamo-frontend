@@ -9,8 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>LEMMINKAINEN</title>
 </head>
+http://localhost/Lemmikkivuokraamo-frontend/lemmink%C3%A4inen/oheistuotteet.php
+
 <body>
-  <?php require '../php/modules/db.php'?>
+  <?php require '../php/modules/functions.php'?>
   <header>
       <ul class="nav nav-tabs">
         <li class="nav-item">
@@ -32,22 +34,21 @@
   </header>
 
     <div class="container">
-        <div class="row">
-          <div class="col-5" class="header">
-            <div class="intro">
+      <ul>
+        <?php
+          $products = getProducts();
 
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
+          foreach($products as $p){
+          echo "<div>".$p["tuote"]." ".$p["hinta"]. $p["info"] . '</div>';
+          }
+        ?>
+      </ul>
+    </div>
 
   <footer>
     <div class="container">
       <div class="row">
-        <p>
-        Made by :  OAMK TIETOJENKÄSITTELY 12/2021 
-        </p>
+
       </div>
     </div>
   </footer>
