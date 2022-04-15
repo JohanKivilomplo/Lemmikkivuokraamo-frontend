@@ -10,6 +10,7 @@
     <title>LEMMINKAINEN</title>
 </head>
 <body>
+  <?php require '../php/modules/db.php'?>
   <header>
       <ul class="nav nav-tabs">
         <li class="nav-item">
@@ -40,6 +41,7 @@
           </div>
         </div>
       </div>
+
   <footer>
     <div class="container">
       <div class="row">

@@ -89,3 +89,22 @@ INSERT INTO ELAIN(rotu, hinta, tietoa, lajinro)
     ("Punakorvakilpikonna", "40", "Nimi:  KOVA-KALLE", 3)
 
 ;
+
+INSERT INTO oheistuotteet(tuote,hinta,maara,elainID,info)
+VALUES
+("Puruluu","8,5","200",1,"Pidä karvaturrisi suu terveenä."),
+
+("Kissan hiekka","10","100",2,"Paakkuuntuva kissan hiekka."),
+("Kristalli hiekka","12","50",2,"Sekoitettava kristallinen kissan hiekka."),
+
+("Ninjato","50","5",3,"Leonardo leads."),
+("Bo","50","5",3,"Donatello does machines."),
+("Sai","50","5",3,"Raphael is cool but rude."),
+("Nunchaku","50","5",3,"Michelangelo is a party dude."),
+
+("Auringonkukansiemeniä","4","20",4,"Ravitsevaa ruokaa linnuille. Titityy."),
+
+("Turkinhoitopaketti","20","10",5,"Eläimen turkin harjaaminen voi olla hyvin rauhoittavaa."),
+
+("Harja","12","50",6,"Hevosen turkin ja harjaksen...harjaukseen.")
+;
