@@ -34,15 +34,14 @@ http://localhost/Lemmikkivuokraamo-frontend/lemmink%C3%A4inen/oheistuotteet.php
   </header>
 
     <div class="container">
-      <ul>
         <?php
           $products = getProducts();
+          $animal = getAnimal();
 
           foreach($products as $p){
           echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . '</div>'. "</br>";
           }
         ?>
-      </ul>
     </div>
 
   <footer>
