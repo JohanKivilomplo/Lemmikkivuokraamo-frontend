@@ -64,9 +64,9 @@ CREATE Table oheistuotteet (
     tuote TEXT NOT NULL,
     hinta INT NOT NULL,
     maara INT NOT NULL,
-    elainID INT NOT NULL,
+    lajinro INT NOT NULL,
     info TEXT,
-    FOREIGN KEY (elainID) REFERENCES ELAIN(elainID)
+    FOREIGN KEY (lajinro) REFERENCES LAJI(lajinro)
 );
 
 INSERT INTO LAJI(lajinimi)
@@ -90,7 +90,7 @@ INSERT INTO ELAIN(rotu, hinta, tietoa, lajinro)
 
 ;
 
-INSERT INTO oheistuotteet(tuote,hinta,maara,elainID,info)
+INSERT INTO oheistuotteet(tuote,hinta,maara,lajinro,info)
 VALUES
 ("Puruluu","8,5","200",1,"Pidä karvaturrisi suu terveenä."),
 

@@ -35,8 +35,70 @@ http://localhost/Lemmikkivuokraamo-frontend/lemmink%C3%A4inen/oheistuotteet.php
 
     <div class="container">
         <?php
-          $products = getProducts();
-          $animal = getAnimal();
+          $products = getDogProducts();
+          $animal = getDog();
+
+          foreach($animal as $a){
+            echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
+            }
+
+          foreach($products as $p){
+          echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . '</div>'. "</br>";
+          }
+
+
+          $products = getCatProducts();
+          $animal = getCat();
+
+          foreach($animal as $a){
+            echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
+            }
+
+          foreach($products as $p){
+          echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . '</div>'. "</br>";
+          }
+
+
+          $products = getTurtleProducts();
+          $animal = getTurtle();
+
+          foreach($animal as $a){
+            echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
+            }
+
+          foreach($products as $p){
+          echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . '</div>'. "</br>";
+          }
+
+
+          $products = getBirdProducts();
+          $animal = getBird();
+
+          foreach($animal as $a){
+            echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
+            }
+
+          foreach($products as $p){
+          echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . '</div>'. "</br>";
+          }
+
+          $products = getSheepProducts();
+          $animal = getSheep();
+
+          foreach($animal as $a){
+            echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
+            }
+
+          foreach($products as $p){
+          echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . '</div>'. "</br>";
+          }
+
+          $products = getHorseProducts();
+          $animal = getHorse();
+
+          foreach($animal as $a){
+            echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
+            }
 
           foreach($products as $p){
           echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . '</div>'. "</br>";
