@@ -19,7 +19,7 @@
           <a class="nav-link" href="../lemminkäinen/kamppanja.html">ELÄIMET</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../lemminkäinen/eläimet.html">PALAUTE</a>
+          <a class="nav-link" href="../lemminkäinen/PALAUTE.php">PALAUTE</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../lemminkäinen/oheistuotteet.html">OHEISTUOTTEET</a>

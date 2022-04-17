@@ -191,4 +191,28 @@ function getHorseProducts(){
         throw $e;
     }
 }
+
+function addFeedback($palautenro, $etunimi, $sukunimi, $sahkoposti, $puhelinnro, $palaute) {
+    require_once 'db.php'; // DB connection
+
+    //Tarkistetaan onko parametreja asetettu
+    if( !isset($etunimi) || !isset($sukunimi) || !isset($sahkoposti) || !isset($puhelinnro) || !isset($palaute) ){
+        echo "Parametreja puuttui!! Ei voida lisätä työaikaa";
+        exit;
+    }
+
+    try{
+        $pdo = openDb();
+        //Suoritetaan parametrien lisääminen tietokantaan.
+        $sql = "INSERT INTO palaute (palautenro, etunimi, sukunimi, sposti, puhnro, palaute) VALUES (?,?,?,?,?,?)";
+        $statement = $pdo->prepare($sql);
+        $statement->execute( array($palautenro, $etunimi, $sukunimi, $sahkoposti, $puhelinnro, $palaute) );
+
+        echo "Palaute tallennettu<br><br>";
+    }catch(PDOException $e){
+        echo "Palautetta ei tallennettu";
+        echo $e->getMessage();
+    }
+
+}
 ?>

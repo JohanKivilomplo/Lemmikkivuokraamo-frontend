@@ -10,6 +10,9 @@
     <title>LEMMINKAINEN</title>
 </head>
 <body>
+
+<?php require '../php/modules/functions.php'?>
+
   <header>
       <ul class="nav nav-tabs">
         <li class="nav-item">
@@ -36,26 +39,26 @@
         <div class="h3">
         Anna meille palautetta!
         </div>
-        <form>
+        <form action="PALAUTE.php" method="post">
           <div class="form-group">
             <label for="etunimi">Etunimi</label>
-            <input type="text" class="form-control" id="etunimi" placeholder="Etunimi">
+            <input type="text" class="form-control" name="etunimi" id="etunimi" placeholder="Etunimi">
           </div>
           <div class="form-group">
             <label for="sukunimi">Sukunimi</label>
-            <input type="text" class="form-control" id="sukunimi" placeholder="Sukunimi">
+            <input type="text" class="form-control" name="sukunimi" id="sukunimi" placeholder="Sukunimi">
           </div>
           <div class="form-group">
             <label for="email">Sähköposti</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Syötä sähköpostiosoitteesi">
+            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Syötä sähköpostiosoitteesi">
           </div>
           <div class="form-group">
             <label for="phone">Puhelinnumero</label>
-            <input type="tel" class="form-control" id="phonenumber" placeholder="Puhelinnumero">
+            <input type="tel" class="form-control" name="phonenumber" id="phonenumber" placeholder="Puhelinnumero">
           </div>
           <div class="form-group">
             <label for="exampleFormControlTextarea1">Palaute</label>
-            <textarea class="form-control" id="palautelaatikko" rows="3" placeholder="Anna meille palautetta..."></textarea>
+            <textarea class="form-control" name="palautelaatikko" id="palautelaatikko" rows="3" placeholder="Anna meille palautetta..."></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary m-2">Lähetä</button>
@@ -63,6 +66,23 @@
       </div>
     </div>
   </div>
+
+  <?php
+
+    $palautenro = "";
+    $etunimi = filter_input(INPUT_POST, "etunimi");
+    $sukunimi = filter_input(INPUT_POST, "sukunimi");
+    $sahkoposti = filter_input(INPUT_POST, "email");
+    $puhelinnro = filter_input(INPUT_POST, "phonenumber");
+    $palaute = filter_input(INPUT_POST, "palautelaatikko");
+        
+    if(isset($etunimi)){
+        addFeedback($palautenro, $etunimi, $sukunimi, $sahkoposti, $puhelinnro, $palaute);
+        echo '<div class="alert alert-success" role="alert">Palaute lisätty!!</div>';
+    }
+
+    $selectedID = isset($etunimi) ? $etunimi : 0;
+?>
 
   <footer>
     <div class="container">
