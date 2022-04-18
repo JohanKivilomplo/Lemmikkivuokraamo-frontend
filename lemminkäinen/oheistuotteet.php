@@ -17,7 +17,7 @@ http://localhost/Lemmikkivuokraamo-frontend/lemmink%C3%A4inen/oheistuotteet.php
   <header>
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="../lemminkäinen/index.php">ETUSIVU</a>
+          <a class="nav-link" aria-current="page" href="../index.php">ETUSIVU</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../lemminkäinen/eläimet.php">ELÄIMET</a>
@@ -33,89 +33,102 @@ http://localhost/Lemmikkivuokraamo-frontend/lemmink%C3%A4inen/oheistuotteet.php
           </li>
       </ul>
   </header>
-      <div class="dogs">
-        <?php
-          $products = getDogProducts();
-          $animal = getDog();
-
-          foreach($animal as $a){
-            echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
-            }
-          foreach($products as $p){
-          echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . " " .'<button>Osta</button>' . '</div>' . "</br>";
-          }
-        ?>
-      </div>
-
-      <div class="cats">
-        <?php
-          $products = getCatProducts();
-          $animal = getCat();
-
-          foreach($animal as $a){
-            echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
-            }
-          foreach($products as $p){
-          echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . " " .'<button>Osta</button>' . '</div>'. "</br>";
-          }
-        ?>
-      </div>
+  <div class="container">
+  <div class="row">
+    <div class="col">
       
-      <div class="turtles">
-        <?php
-          $products = getTurtleProducts();
-          $animal = getTurtle();
+    </div>
+    <div class="col">
+      <div class="dogs">
+          <?php
+            $products = getDogProducts();
+            $animal = getDog();
 
-          foreach($animal as $a){
-            echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
+            foreach($animal as $a){
+              echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
+              }
+            foreach($products as $p){
+            echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . " " . "</br>" .'<button>Osta</button>' . '</div>' . "</br>";
             }
-          foreach($products as $p){
-          echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . " " .'<button>Osta</button>' . '</div>'. "</br>";
-          }
-        ?>
-      </div>
+          ?>
+        </div>
 
-      <div class="birds">
-        <?php
-          $products = getBirdProducts();
-          $animal = getBird();
+        <div class="cats">
+          <?php
+            $products = getCatProducts();
+            $animal = getCat();
 
-          foreach($animal as $a){
-            echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
+            foreach($animal as $a){
+              echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
+              }
+            foreach($products as $p){
+            echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . " ". "</br>" .'<button>Osta</button>' . '</div>'. "</br>";
             }
-          foreach($products as $p){
-          echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . " " .'<button>Osta</button>' . '</div>'. "</br>";
-          }
-        ?>
-      </div>
+          ?>
+        </div>
+        
+        <div class="turtles">
+          <?php
+            $products = getTurtleProducts();
+            $animal = getTurtle();
 
-      <div class="sheeps">
-        <?php
-          $products = getSheepProducts();
-          $animal = getSheep();
-
-          foreach($animal as $a){
-            echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
+            foreach($animal as $a){
+              echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
+              }
+            foreach($products as $p){
+            echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . " ". "</br>" .'<button>Osta</button>' . '</div>'. "</br>";
             }
-          foreach($products as $p){
-          echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . " " .'<button>Osta</button>' . '</div>' . "</br>";
-          }
-        ?>
-      </div>
+          ?>
+        </div>
 
-      <div class="horses">
-        <?php
-          $products = getHorseProducts();
-          $animal = getHorse();
+        <div class="birds">
+          <?php
+            $products = getBirdProducts();
+            $animal = getBird();
 
-          foreach($animal as $a){
-            echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
+            foreach($animal as $a){
+              echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
+              }
+            foreach($products as $p){
+            echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . " ". "</br>" .'<button>Osta</button>' . '</div>'. "</br>";
             }
-          foreach($products as $p){
-          echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . " " .'<button>Osta</button>' . '</div>'. "</br>";
-          }
-        ?>
+          ?>
+        </div>
+
+        <div class="sheeps">
+          <?php
+            $products = getSheepProducts();
+            $animal = getSheep();
+
+            foreach($animal as $a){
+              echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
+              }
+            foreach($products as $p){
+            echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . " ". "</br>" .'<button>Osta</button>' . '</div>' . "</br>";
+            }
+          ?>
+        </div>
+
+        <div class="horses">
+          <?php
+            $products = getHorseProducts();
+            $animal = getHorse();
+
+            foreach($animal as $a){
+              echo "<div>" . "<h2>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
+              }
+            foreach($products as $p){
+            echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . " ". "</br>" .'<button>Osta</button>' . '</div>'. "</br>";
+            }
+          ?>
       </div>
+    </div>
+    <div class="col">
+      
+    </div>
+  </div>
+</div>
+      
 
 
   <footer>
