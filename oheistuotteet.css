@@ -1,0 +1,25 @@
+body{
+    background-color: blanchedalmond;
+}
+
+.col{
+    border: 2px solid black;
+}
+
+.dogs,.cats,.turtles,.birds,.sheeps,.horses{
+    background-color: white;
+    border: 2px solid black;
+    margin-top: 2em;
+    padding-left: 12em
+};
+
+h2{
+    padding-left: 3em;
+}
+
+#koira,#kissa,#lintu{
+    padding-left: 2.8em;
+}
+#kilpikonna{
+    padding-left: 2em;
+}
