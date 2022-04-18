@@ -1,3 +1,13 @@
+body{
+    background-color: blanchedalmond;
+}
+
 .col{
     align-items: center;
+    border: 2px solid black;
 }
+
+.dogs,.cats,.turtles,.birds,.sheeps,.horses{
+    background-color: white;
+    align-items: center;
+};
