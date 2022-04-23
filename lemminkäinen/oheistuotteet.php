@@ -33,7 +33,7 @@ http://localhost/Lemmikkivuokraamo-frontend/lemmink%C3%A4inen/oheistuotteet.php
             <a class="nav-link" href="../lemminkäinen/kamppanja.php">KAMPPANJAT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../lemminkäinen/vuokraus.php">VUOKRAUS</a>
+            <a class="nav-link" href="../lemminkäinen/lisääKäyttäjä.php">LISÄÄ KÄYTTÄJÄ</a>
           </li>
       </ul>
   </header>

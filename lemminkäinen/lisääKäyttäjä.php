@@ -22,13 +22,38 @@
           <a class="nav-link" href="../lemminkäinen/PALAUTE.html">PALAUTE</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../lemminkäinen/oheistuotteet.html">OHEISTUOTTEET</a>
+          <a class="nav-link" href="../lemminkäinen/oheistuotteet.php">OHEISTUOTTEET</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../lemminkäinen/kamppanja.html">KAMPPANJAT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="../lemminkäinen/vuokraus.php">VUOKRAUS</a>
+            <a class="nav-link active" href="../lemminkäinen/lisääKäyttäjä.php">LISÄÄ KÄYTTÄJÄ</a>
           </li>
       </ul>
   </header>
+  <?php
+
+include '../php/modules/person.php';
+?>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-3">
+      
+    </div>
+    <div class="col">
+    <form action="lisääKäyttäjä.php" method="post">
+        <label for="fname">Etunimi:</label><br>
+        <input type="text" name="fname" id="fname"><br>
+        <label for="lname">Sukunimi:</label><br>
+        <input type="text" name="lname" id="lname"><br>
+        <input type="submit" class="btn btn-primary" value="Lisää käyttäjä">
+    </form>
+    </div>
+    </div>
+    <div class="col-3">
+      
+    </div>
+  </div>
+</div>
