@@ -31,12 +31,9 @@
             <a class="nav-link" href="../lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="../lemminkäinen/kirjautuminen.php">KIRJAUDU SISÄÄN</a>
-          </li>
-          <li class="nav-item">
             <?php 
                 if(isset($_SESSION["username"])){
-                    echo '<a class="nav-link bg-danger" href="logout.php">Log out</a>';
+                    echo '<a class="nav-link bg-danger" href="../lemminkäinen/uloskirjautuminen.php">Log out</a>';
                 }else{
                     echo '<a class="nav-link bg-success" href="../lemminkäinen/kirjautuminen.php">Log in</a>';
                 }
@@ -58,14 +55,14 @@ include '../php/modules/person.php';
     <?php
       include '../php/modules/authorization.php';
 
-      $fname = filter_input(INPUT_POST, "username");
+      $uname = filter_input(INPUT_POST, "username");
       $pw = filter_input(INPUT_POST, "password");
 
       if(!isset($_SESSION["username"]) && isset($uname)){
 
           try {
               login($uname, $pw);
-              header("Location: ../index.php");
+              header("Location: kirjautuminen.php");
               exit;
           } catch (Exception $e) {
               echo '<div class="alert alert-danger" role="alert">'.$e->getMessage().'</div>';
@@ -76,7 +73,7 @@ include '../php/modules/person.php';
           if(!isset($_SESSION["usename"])){
       ?>
 
-          <form action="lisääKäyttäjä.php" method="post">
+          <form action="kirjautuminen.php" method="post">
               <label for="username">Käyttäjänimi:</label><br>
               <input type="text" name="username" id="username"><br>
               <label for="password">Salasana:</label><br>
