@@ -13,6 +13,7 @@ CREATE table ASIAKAS (
     osoite VARCHAR(100) NOT NULL,
     postinro INT(5) NOT NULL,
     postitmp VARCHAR(100) NOT NULL,
+    salasana VARCHAR(100) NOT NULL,
     UNIQUE(asiakasnro)
 );
 

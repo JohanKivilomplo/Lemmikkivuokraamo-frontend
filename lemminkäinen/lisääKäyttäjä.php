@@ -28,7 +28,7 @@
             <a class="nav-link" href="../lemminkäinen/kamppanja.html">KAMPPANJAT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="../lemminkäinen/lisääKäyttäjä.php">LISÄÄ KÄYTTÄJÄ</a>
+            <a class="nav-link active" href="../lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
           </li>
       </ul>
   </header>
@@ -48,6 +48,7 @@ include '../php/modules/person.php';
         <input type="text" name="fname" id="fname"><br>
         <label for="lname">Sukunimi:</label><br>
         <input type="text" name="lname" id="lname"><br>
+        
         <input type="submit" class="btn btn-primary" value="Lisää käyttäjä">
     </form>
     </div>
