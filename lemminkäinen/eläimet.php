@@ -41,13 +41,13 @@
                     <h2><a href="#">Title</a></h2>
                     <p>
                       <?php
-                      function getDog(){
-                        require_once 'db.php';
+                      function getCarita(){
+                        require_once '../php/modules/db.php';
 
                         try{
                             $pdo = openDb();
                             // Create SQL query to get all rows from a table
-                            $sql = "SELECT * FROM LAJI WHERE lajinro = 1";
+                            $sql = "SELECT * FROM ELAIN WHERE elainID = 1";
                             // Execute the query
                             $people = $pdo->query($sql);
 
@@ -58,9 +58,16 @@
                     }
                     ?>
 </p>
+                  <?php $CARITA = getCarita() ?>
+
                   </div>
                   <div class="card">
-                    <h2><a href="#">Title</a></h2>
+                    <h2><a href="#">
+                      <?php             
+                      foreach($CARITA as $a){
+                      echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
+                      } ?>
+                      </a></h2>
                     <p>Some article description stuff.</p>
                   </div>
                   <div class="card">
