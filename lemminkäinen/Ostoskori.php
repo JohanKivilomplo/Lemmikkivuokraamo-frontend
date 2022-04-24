@@ -27,18 +27,18 @@
         <li class="nav-item">
             <a class="nav-link" href="lemminkäinen/kamppanja.php">KAMPPANJAT</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="lemminkäinen/Ostoskori.php">VUOKRAUS</a>
-          </li>
+        <li class="nav-item">
+            <a class="nav-link" href="../Lemmikkivuokraamo-frontend/lemminkäinen/lemminkäinen/Ostoskori.php">VUOKRAUS</a>
+        </li>
           <li class="nav-item">
             <a class="nav-link" href="lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
           </li>
           <li class="nav-item">
             <?php 
                 if(isset($_SESSION["username"])){
-                    echo '<a class="nav-link bg-danger" href="lemminkäinen/uloskirjautuminen.php">Log out</a>';
+                    echo '<a class="nav-link bg-danger" href="../lemminkäinen/uloskirjautuminen.php">Log out</a>';
                 }else{
-                    echo '<a class="nav-link bg-success" href="lemminkäinen/kirjautuminen.php">Log in</a>';
+                    echo '<a class="nav-link bg-success" href="../lemminkäinen/kirjautuminen.php">Log in</a>';
                 }
             ?>
             </li>
@@ -52,12 +52,8 @@
               <?php echo "TESTITEKSTI" ?>
             </p> <br>
             <div class="intro">
-              <p> <br>
-                Tervetuloa lemmikkivuokraamoo Lemminkäiseen!<br>
-                Tarjoamme koulutettuja eläimiä esimerkiksi syntymäpäiville, elokuvatuotantoon tai vaikkapa vanhainkotivierailulle!
-                Sivuiltamme löydät myös tarvittavat oheistuotteet vierailun sujumiseen.
+              <p> <br> vuokraussivu
               </p> 
-              <p class= "nimi">Lemminkäinen</p>
             </div>
           </div>
           <div id="profile" class="col-5">

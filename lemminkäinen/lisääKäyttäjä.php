@@ -13,7 +13,7 @@
   <header>
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/index.php">ETUSIVU</a>
+          <a class="nav-link" aria-current="page" href="../index.php">ETUSIVU</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../lemminkäinen/eläimet.php">ELÄIMET</a>
@@ -28,8 +28,20 @@
             <a class="nav-link" href="../lemminkäinen/kamppanja.php">KAMPPANJAT</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="../Lemmikkivuokraamo-frontend/lemminkäinen/lemminkäinen/Ostoskori.php">VUOKRAUS</a>
+        </li>
+          <li class="nav-item">
             <a class="nav-link active" href="../lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
           </li>
+          <li class="nav-item">
+            <?php 
+                if(isset($_SESSION["username"])){
+                    echo '<a class="nav-link bg-danger" href="../lemminkäinen/uloskirjautuminen.php">Log out</a>';
+                }else{
+                    echo '<a class="nav-link bg-success" href="../lemminkäinen/kirjautuminen.php">Log in</a>';
+                }
+            ?>
+            </li>
       </ul>
   </header>
   <?php
@@ -67,37 +79,6 @@ include '../php/modules/person.php';
     </div>
     </div>
     <div class="col-3">
-    <?php
-      include '../php/modules/authorization.php';
-
-      $fname = filter_input(INPUT_POST, "username");
-      $pw = filter_input(INPUT_POST, "password");
-
-      if(!isset($_SESSION["username"]) && isset($uname)){
-
-          try {
-              login($uname, $pw);
-              header("Location: ../index.php");
-              exit;
-          } catch (Exception $e) {
-              echo '<div class="alert alert-danger" role="alert">'.$e->getMessage().'</div>';
-          }
-        
-      }
-
-          if(!isset($_SESSION["usename"])){
-      ?>
-
-          <form action="lisääKäyttäjä.php" method="post">
-              <label for="username">Käyttäjänimi:</label><br>
-              <input type="text" name="username" id="username"><br>
-              <label for="password">Salasana:</label><br>
-              <input type="password" name="password" id="password"><br>
-              <input type="submit" class="btn btn-primary" value="Log in">
-          </form>
-
-
-    <?php } ?>
     </div>
   </div>
 </div>

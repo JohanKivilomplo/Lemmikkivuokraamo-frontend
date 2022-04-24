@@ -25,16 +25,10 @@
           <a class="nav-link" href="../lemminkäinen/oheistuotteet.php">OHEISTUOTTEET</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="../lemminkäinen/kamppanja.php">KAMPPANJAT</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="../Lemmikkivuokraamo-frontend/lemminkäinen/lemminkäinen/Ostoskori.php">VUOKRAUS</a>
         </li>
           <li class="nav-item">
-            <a class="nav-link active" href="../lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../lemminkäinen/kirjautuminen.php">KIRJAUDU SISÄÄN</a>
+            <a class="nav-link" href="../lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
           </li>
           <li class="nav-item">
             <?php 
@@ -47,31 +41,52 @@
             </li>
       </ul>
   </header>
+  <?php
+
+include '../php/modules/person.php';
+?>
 
   <div class="container">
-    <div class="row">
-      <div class="col">
-        <img src="" alt="">
-        <h2>Vuokrattava eläin</h2>
-        <p>info</p>
-        <p>kampanja aika</p>
-      </div>
-      <div class="col">
-        <img src="" alt="">
-        <h2>Vuokrattava eläin</h2>
-        <p>info</p>
-        <p>kampanja aika</p>
-      </div>
-      <div class="col">
-        <img src="" alt="">
-        <h2>Vuokrattava eläin</h2>
-        <p>info</p>
-        <p>kampanja aika</p>
-      </div>
+  <div class="row">
+    <div class="col-3">
+      
+    </div>
+    <div class="col">
+    <?php
+      include '../php/modules/authorization.php';
+
+      $uname = filter_input(INPUT_POST, "username");
+      $pw = filter_input(INPUT_POST, "password");
+
+      if(!isset($_SESSION["username"]) && isset($uname)){
+
+          try {
+              login($uname, $pw);
+              header("Location: kirjautuminen.php");
+              exit;
+          } catch (Exception $e) {
+              echo '<div class="alert alert-danger" role="alert">'.$e->getMessage().'</div>';
+          }
+        
+      }
+
+          if(!isset($_SESSION["usename"])){
+      ?>
+
+          <form action="kirjautuminen.php" method="post">
+              <label for="username">Käyttäjänimi:</label><br>
+              <input type="text" name="username" id="username"><br>
+              <label for="password">Salasana:</label><br>
+              <input type="password" name="password" id="password"><br>
+              <input type="submit" class="btn btn-primary" value="Log in">
+          </form>
+
+
+    <?php } ?>
+    </div>
+    </div>
+    <div class="col-3">
     </div>
   </div>
-
-  <footer>
-  </footer>
+</div>
 </body>
-</html>
