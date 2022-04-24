@@ -48,7 +48,18 @@ include '../php/modules/person.php';
         <input type="text" name="fname" id="fname"><br>
         <label for="lname">Sukunimi:</label><br>
         <input type="text" name="lname" id="lname"><br>
-        
+        <label for="email">Sähköposti:</label><br>
+        <input type="email" name="email" id="email"><br>
+        <label for="puhnro">Puhelinnumero:</label><br>
+        <input type="text" name="puhnro" id="puhnro"><br>
+        <label for="osoite">Katuosoite:</label><br>
+        <input type="text" name="osoite" id="osoite"><br>
+        <label for="postinro">Postinumero:</label><br>
+        <input type="text" name="postinro" id="postinro"><br>
+        <label for="postitmp">Postitoimipaikka:</label><br>
+        <input type="text" name="postitmp" id="postitmp"><br>
+        <label for="pw">Salasana:</label><br>
+        <input type="password" name="pw" id="pw"><br>
         <input type="submit" class="btn btn-primary" value="Lisää käyttäjä">
     </form>
     </div>
