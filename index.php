@@ -13,22 +13,22 @@
   <header>
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">ETUSIVU</a>
+          <a class="nav-link active" aria-current="page" href="index.php">ETUSIVU</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="lemminkäinen/kamppanja.php">ELÄIMET</a>
+          <a class="nav-link" href="lemminkäinen/eläimet.php">ELÄIMET</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="lemminkäinen/eläimet.php">PALAUTE</a>
+          <a class="nav-link" href="lemminkäinen/PALAUTE.php">PALAUTE</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="lemminkäinen/oheistuotteet.php">OHEISTUOTTEET</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="lemminkäinen/PALAUTE.php">KAMPPANJAT</a>
+            <a class="nav-link" href="lemminkäinen/kamppanja.php">KAMPPANJAT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
+            <a class="nav-link" href="lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
           </li>
       </ul>
   </header>
