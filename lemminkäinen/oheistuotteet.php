@@ -36,17 +36,14 @@ http://localhost/Lemmikkivuokraamo-frontend/lemmink%C3%A4inen/oheistuotteet.php
             <a class="nav-link" href="lemminkäinen/Ostoskori.php">VUOKRAUS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="../lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../lemminkäinen/kirjautuminen.php">KIRJAUDU SISÄÄN</a>
+            <a class="nav-link" href="../lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
           </li>
           <li class="nav-item">
             <?php 
                 if(isset($_SESSION["username"])){
                     echo '<a class="nav-link bg-danger" href="logout.php">Log out</a>';
                 }else{
-                    echo '<a class="nav-link bg-success" href="login.php">Log in</a>';
+                    echo '<a class="nav-link bg-success" href="../lemminkäinen/kirjautuminen.php">Log in</a>';
                 }
             ?>
             </li>
