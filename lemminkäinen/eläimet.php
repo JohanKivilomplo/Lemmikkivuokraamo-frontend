@@ -75,7 +75,7 @@
                         }
                     }
                     ?>
-</p>
+                    </p>
                   <?php $CARITA = getCarita() ?>
 
                   </div>
@@ -88,18 +88,51 @@
                       </a></h2>
                     <p>Some article description stuff.</p>
                   </div>
+
+                  <div class="card">
+                    <h2><a href="#">Title</a></h2>
+                    <p>
+                      <?php
+                      function getBenjamin(){
+                        require_once '../php/modules/db.php';
+
+                        try{
+                            $pdo = openDb();
+                            // Create SQL query to get all rows from a table
+                            $sql = "SELECT * FROM ELAIN WHERE elainID = 5";
+                            // Execute the query
+                            $people = $pdo->query($sql);
+
+                            return $people->fetchAll();
+                        }catch(PDOException $e){
+                            throw $e;
+                        }
+                    }
+                    ?>
+                    </p>
+                  <?php $BENJAMIN = getBenjamin() ?>
+
+                  </div>
+                  <div class="card">
+                    <h2><a href="#">
+                      <?php             
+                      foreach($BENJAMIN as $a){
+                      echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
+                      } ?>
+                      </a></h2>
+                    <p>Some article description stuff.</p>
+                  </div>
+
                   <div class="card">
                     <h2><a href="#">Title</a></h2>
                     <p>Some article description stuff.</p>
                   </div>
+                  
                   <div class="card">
                     <h2><a href="#">Title</a></h2>
                     <p>Some article description stuff.</p>
                   </div>
-                  <div class="card">
-                    <h2><a href="#">Title</a></h2>
-                    <p>Some article description stuff.</p>
-                  </div>
+
                 </div>
             </div>
 
