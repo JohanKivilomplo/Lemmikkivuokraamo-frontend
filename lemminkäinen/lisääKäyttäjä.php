@@ -58,6 +58,8 @@ include '../php/modules/person.php';
         <input type="text" name="postinro" id="postinro"><br>
         <label for="postitmp">Postitoimipaikka:</label><br>
         <input type="text" name="postitmp" id="postitmp"><br>
+        <label for="username">Käyttäjänimi:</label><br>
+        <input type="text" name="username" id="username"><br>
         <label for="pw">Salasana:</label><br>
         <input type="password" name="pw" id="pw"><br>
         <input type="submit" class="btn btn-primary" value="Lisää käyttäjä">
@@ -65,7 +67,38 @@ include '../php/modules/person.php';
     </div>
     </div>
     <div class="col-3">
-      
+    <?php
+      include '../php/modules/authorization.php';
+
+      $fname = filter_input(INPUT_POST, "username");
+      $pw = filter_input(INPUT_POST, "password");
+
+      if(!isset($_SESSION["username"]) && isset($uname)){
+
+          try {
+              login($uname, $pw);
+              header("Location: ../index.php");
+              exit;
+          } catch (Exception $e) {
+              echo '<div class="alert alert-danger" role="alert">'.$e->getMessage().'</div>';
+          }
+        
+      }
+
+          if(!isset($_SESSION["usename"])){
+      ?>
+
+          <form action="lisääKäyttäjä.php" method="post">
+              <label for="username">Käyttäjänimi:</label><br>
+              <input type="text" name="username" id="username"><br>
+              <label for="password">Salasana:</label><br>
+              <input type="password" name="password" id="password"><br>
+              <input type="submit" class="btn btn-primary" value="Log in">
+          </form>
+
+
+    <?php } ?>
     </div>
   </div>
 </div>
+</body>

@@ -1,22 +1,25 @@
 <?php
-function login($fname, $lname, $pw){
+function login($uname, $pw){
 
     require_once 'db.php';
 
+    // $uname = filter_input(INPUT_POST, "username");
+    // $pw = filter_input(INPUT_POST, "password");
+
     //Tarkistetaan onko muttujia asetettu
-    if( !isset($fname) || !isset($lname) || !isset($pw) ){
+    if( !isset($uname) || !isset($pw) ){
         throw new Exception("Missing parameters. Cannot log in.");
     }
 
     //Tarkistetaan, ettei tyhjiä arvoja muuttujissa
-    if( empty($fname) || !isset($lname) || empty($pw) ){
+    if( empty($uname) || empty($pw) ){
         throw new Exception("Cannot log in with empty values.");
     }
 
     try{
         $pdo = openDb();
         //Haetaan käyttäjä annetulla käyttäjänimellä
-        $sql = "SELECT username, password, firstname, lastname FROM person WHERE username=?";
+        $sql = "SELECT username, salasana, etunimi, sukunimi FROM ASIAKAS WHERE username=?";
         $statement = $pdo->prepare($sql);
         $statement->bindParam(1, $uname);
         $statement->execute();
@@ -28,14 +31,14 @@ function login($fname, $lname, $pw){
         $row = $statement->fetch();
 
         //Tarkistetaan käyttäjän antama salasana tietokannan salasanaa vasten
-        if(!password_verify($pw, $row["password"] )){
+        if(!password_verify($pw, $row["salasana"] )){
             throw new Exception("Wrong password!!");
         }
 
         //Jos käyttäjä tunnistettu, talletetaan käyttäjän tiedot sessioon
         $_SESSION["username"] = $uname;
-        $_SESSION["fname"] = $row["firstname"];
-        $_SESSION["lname"] = $row["lastname"];
+        $_SESSION["fname"] = $row["etunimi"];
+        $_SESSION["lname"] = $row["sukunimi"];
 
     }catch(PDOException $e){
         throw $e;

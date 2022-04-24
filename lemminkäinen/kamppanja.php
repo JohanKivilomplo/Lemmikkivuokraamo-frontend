@@ -13,19 +13,19 @@
   <header>
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../lemminkäinen/index.html">ETUSIVU</a>
+          <a class="nav-link active" aria-current="page" href="../index.php">ETUSIVU</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../lemminkäinen/eläimet.html">ELÄIMET</a>
+          <a class="nav-link" href="/eläimet.php">ELÄIMET</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../lemminkäinen/PALAUTE.html">PALAUTE</a>
+          <a class="nav-link" href="/PALAUTE.php">PALAUTE</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../lemminkäinen/oheistuotteet.html">OHEISTUOTTEET</a>
+          <a class="nav-link" href="/oheistuotteet.php">OHEISTUOTTEET</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../lemminkäinen/kamppanja.html">KAMPPANJAT</a>
+            <a class="nav-link" href="/kamppanja.php">KAMPPANJAT</a>
           </li>
       </ul>
   </header>
