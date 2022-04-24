@@ -49,7 +49,7 @@
             </div>
           </div>
           <div id="profile" class="col-5">
-            <img src="../lemminkäinen/kuvat/sheep-1822137_960_720.webp">
+            <img src="../lemminkäinen/kuvat/sheep.jpg">
           </div>
         </div>
       </div>
