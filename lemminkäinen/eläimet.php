@@ -10,6 +10,7 @@
     <title>LEMMINKAINEN</title>
 </head>
 <body>
+  <?php require '../php/modules/functions.php'?>
   <header>
       <ul class="nav nav-tabs">
         <li class="nav-item">
@@ -38,7 +39,25 @@
                 <div class="cards">
                   <div class="card">
                     <h2><a href="#">Title</a></h2>
-                    <p>Some article description stuff.</p>
+                    <p>
+                      <?php
+                      function getDog(){
+                        require_once 'db.php';
+
+                        try{
+                            $pdo = openDb();
+                            // Create SQL query to get all rows from a table
+                            $sql = "SELECT * FROM LAJI WHERE lajinro = 1";
+                            // Execute the query
+                            $people = $pdo->query($sql);
+
+                            return $people->fetchAll();
+                        }catch(PDOException $e){
+                            throw $e;
+                        }
+                    }
+                    ?>
+</p>
                   </div>
                   <div class="card">
                     <h2><a href="#">Title</a></h2>
