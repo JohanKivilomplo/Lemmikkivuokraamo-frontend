@@ -14,6 +14,7 @@ CREATE table ASIAKAS (
     postinro INT(5) NOT NULL,
     postitmp VARCHAR(100) NOT NULL,
     salasana VARCHAR(100) NOT NULL,
+    username VARCHAR(150) UNIQUE,
     UNIQUE(asiakasnro)
 );
 
