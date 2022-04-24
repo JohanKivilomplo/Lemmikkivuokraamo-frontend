@@ -31,6 +31,9 @@
             <a class="nav-link" href="../lemminkäinen/kamppanja.php">KAMPPANJAT</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="../Lemmikkivuokraamo-frontend/lemminkäinen/lemminkäinen/Ostoskori.php">VUOKRAUS</a>
+        </li>
+          <li class="nav-item">
             <a class="nav-link" href="../lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
           </li>
           <li class="nav-item">
