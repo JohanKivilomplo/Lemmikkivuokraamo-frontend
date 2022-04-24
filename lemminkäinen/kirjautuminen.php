@@ -28,10 +28,10 @@
             <a class="nav-link" href="../lemminkäinen/kamppanja.php">KAMPPANJAT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="../lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
+            <a class="nav-link" href="../lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../lemminkäinen/kirjautuminen.php">KIRJAUDU SISÄÄN</a>
+            <a class="nav-link active" href="../lemminkäinen/kirjautuminen.php">KIRJAUDU SISÄÄN</a>
           </li>
       </ul>
   </header>
@@ -46,27 +46,37 @@ include '../php/modules/person.php';
       
     </div>
     <div class="col">
-    <form action="lisääKäyttäjä.php" method="post">
-        <label for="fname">Etunimi:</label><br>
-        <input type="text" name="fname" id="fname"><br>
-        <label for="lname">Sukunimi:</label><br>
-        <input type="text" name="lname" id="lname"><br>
-        <label for="email">Sähköposti:</label><br>
-        <input type="email" name="email" id="email"><br>
-        <label for="puhnro">Puhelinnumero:</label><br>
-        <input type="text" name="puhnro" id="puhnro"><br>
-        <label for="osoite">Katuosoite:</label><br>
-        <input type="text" name="osoite" id="osoite"><br>
-        <label for="postinro">Postinumero:</label><br>
-        <input type="text" name="postinro" id="postinro"><br>
-        <label for="postitmp">Postitoimipaikka:</label><br>
-        <input type="text" name="postitmp" id="postitmp"><br>
-        <label for="username">Käyttäjänimi:</label><br>
-        <input type="text" name="username" id="username"><br>
-        <label for="pw">Salasana:</label><br>
-        <input type="password" name="pw" id="pw"><br>
-        <input type="submit" class="btn btn-primary" value="Lisää käyttäjä">
-    </form>
+    <?php
+      include '../php/modules/authorization.php';
+
+      $fname = filter_input(INPUT_POST, "username");
+      $pw = filter_input(INPUT_POST, "password");
+
+      if(!isset($_SESSION["username"]) && isset($uname)){
+
+          try {
+              login($uname, $pw);
+              header("Location: ../index.php");
+              exit;
+          } catch (Exception $e) {
+              echo '<div class="alert alert-danger" role="alert">'.$e->getMessage().'</div>';
+          }
+        
+      }
+
+          if(!isset($_SESSION["usename"])){
+      ?>
+
+          <form action="lisääKäyttäjä.php" method="post">
+              <label for="username">Käyttäjänimi:</label><br>
+              <input type="text" name="username" id="username"><br>
+              <label for="password">Salasana:</label><br>
+              <input type="password" name="password" id="password"><br>
+              <input type="submit" class="btn btn-primary" value="Log in">
+          </form>
+
+
+    <?php } ?>
     </div>
     </div>
     <div class="col-3">
