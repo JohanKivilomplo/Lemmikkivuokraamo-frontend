@@ -18,7 +18,7 @@ http://localhost/Lemmikkivuokraamo-frontend/lemmink%C3%A4inen/oheistuotteet.php
   <header>
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/index.php">ETUSIVU</a>
+          <a class="nav-link" aria-current="page" href="../index.php">ETUSIVU</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../lemminkäinen/eläimet.php">ELÄIMET</a>
@@ -38,6 +38,15 @@ http://localhost/Lemmikkivuokraamo-frontend/lemmink%C3%A4inen/oheistuotteet.php
           <li class="nav-item">
             <a class="nav-link" href="../lemminkäinen/kirjautuminen.php">KIRJAUDU SISÄÄN</a>
           </li>
+          <li class="nav-item">
+            <?php 
+                if(isset($_SESSION["username"])){
+                    echo '<a class="nav-link bg-danger" href="logout.php">Log out</a>';
+                }else{
+                    echo '<a class="nav-link bg-success" href="login.php">Log in</a>';
+                }
+            ?>
+            </li>
       </ul>
   </header>
   <div class="container">

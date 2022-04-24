@@ -30,6 +30,21 @@
           <li class="nav-item">
             <a class="nav-link" href="lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lemminkäinen/kirjautuminen.php">KIRJAUDU SISÄÄN</a>
+          </li>
+          <li class="nav-item">
+            <?php 
+                if(isset($_SESSION["username"])){
+                    echo '<a class="nav-link bg-danger" href="logout.php">Log out</a>';
+                }else{
+                    echo '<a class="nav-link bg-success" href="login.php">Log in</a>';
+                }
+            ?>
+            </li>
       </ul>
   </header>
 
