@@ -43,12 +43,8 @@
               <?php echo "TESTITEKSTI" ?>
             </p> <br>
             <div class="intro">
-              <p> <br>
-                Tervetuloa lemmikkivuokraamoo Lemminkäiseen!<br>
-                Tarjoamme koulutettuja eläimiä esimerkiksi syntymäpäiville, elokuvatuotantoon tai vaikkapa vanhainkotivierailulle!
-                Sivuiltamme löydät myös tarvittavat oheistuotteet vierailun sujumiseen.
+              <p> <br> vuokraussivu
               </p> 
-              <p class= "nimi">Lemminkäinen</p>
             </div>
           </div>
           <div id="profile" class="col-5">
