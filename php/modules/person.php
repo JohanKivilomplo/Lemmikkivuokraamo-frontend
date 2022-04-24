@@ -58,6 +58,13 @@ function addPerson($fname, $lname, $email, $puhnro, $osoite, $postinro, $postitm
 
     $fname = filter_input(INPUT_POST, "fname");
     $lname = filter_input(INPUT_POST, "lname");
+    $email = filter_input(INPUT_POST, "email");
+    $puhnro = filter_input(INPUT_POST, "puhnro");
+    $osoite = filter_input(INPUT_POST, "osoite");
+    $postinro = filter_input(INPUT_POST, "postinro");
+    $postitmp = filter_input(INPUT_POST, "postitmp");
+    $pw = filter_input(INPUT_POST, "pw");
+
 
     if(isset($fname)){
         try{
