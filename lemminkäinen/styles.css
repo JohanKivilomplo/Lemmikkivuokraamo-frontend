@@ -107,6 +107,5 @@ body{
 .card:not(:last-child):hover,
 .card:not(:last-child):focus-within {
     transform: translateY(-1rem);
-    ~ .card {
     transform: translateX(2rem);
 }
