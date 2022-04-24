@@ -18,7 +18,7 @@ http://localhost/Lemmikkivuokraamo-frontend/lemmink%C3%A4inen/oheistuotteet.php
   <header>
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="../index.php">ETUSIVU</a>
+          <a class="nav-link" aria-current="page" href="index.php">ETUSIVU</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../lemminkäinen/eläimet.php">ELÄIMET</a>
