@@ -27,7 +27,7 @@ function addPerson($fname, $lname, $email, $puhnro, $osoite, $postinro, $postitm
     
     //Tarkistetaan, ettei tyhjiä arvoja muuttujissa
     if( empty($fname) || empty($lname) || empty($email) || empty($puhnro)
-     || empty($osoite) || empty($postinro) || empty($postitmp) || !isset($uname) || empty($pw)){
+     || empty($osoite) || empty($postinro) || empty($postitmp) || empty($uname) || empty($pw)){
         throw new Exception("Et voi asettaa tyhjiä arvoja");
     }
     
@@ -76,4 +76,30 @@ function addPerson($fname, $lname, $email, $puhnro, $osoite, $postinro, $postitm
             echo '<div class="alert alert-danger" role="alert">'.$e->getMessage().'</div>';
         }
         
+    }
+
+    function deletePerson($id){
+        require_once 'db.php'; // DB connection
+        
+        //Tarkistetaan onko muttujia asetettu
+        if( !isset($id) ){
+            throw new Exception("Missing parameters! Cannot delete person!");
+        }
+        
+        try{
+            $pdo = openDb();
+            // Start transaction
+            $pdo->beginTransaction();
+            // Delete from person table
+            $sql = "DELETE FROM ASIAKAS WHERE asiakasnro = ?";
+            $statement = $pdo->prepare($sql);
+            $statement->bindParam(1, $id);        
+            $statement->execute();
+            // Commit transaction
+            $pdo->commit();
+        }catch(PDOException $e){
+            // Rollback transaction on error
+            $pdo->rollBack();
+            throw $e;
+        }
     }
