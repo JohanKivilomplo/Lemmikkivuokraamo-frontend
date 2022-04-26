@@ -197,7 +197,7 @@ function addFeedback($palautenro, $etunimi, $sukunimi, $sahkoposti, $puhelinnro,
 
     //Tarkistetaan onko parametreja asetettu
     if( !isset($etunimi) || !isset($sukunimi) || !isset($sahkoposti) || !isset($puhelinnro) || !isset($palaute) ){
-        echo "Parametreja puuttui!! Ei voida lisätä työaikaa";
+        echo "Palautetta ei voitu antaa, syötä tietosi";
         exit;
     }
 
