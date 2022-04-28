@@ -90,6 +90,10 @@ function addPerson($fname, $lname, $email, $puhnro, $osoite, $postinro, $postitm
             $pdo = openDb();
             // Start transaction
             $pdo->beginTransaction();
+            $sql = "DELETE FROM VUOKRA WHERE asiakasnro = ?";
+            $statement = $pdo->prepare($sql);
+            $statement->bindParam(1, $id);        
+            $statement->execute();
             // Delete from person table
             $sql = "DELETE FROM ASIAKAS WHERE asiakasnro = ?";
             $statement = $pdo->prepare($sql);

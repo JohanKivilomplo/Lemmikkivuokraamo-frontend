@@ -41,6 +41,9 @@ http://localhost/Lemmikkivuokraamo-frontend/lemmink%C3%A4inen/oheistuotteet.php
             <a class="nav-link" href="../lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link " href="../lemminkäinen/asiakkaat.php">ASIAKKAAT</a>
+          </li>
+          <li class="nav-item">
             <?php 
                 if(isset($_SESSION["username"])){
                     echo '<a class="nav-link bg-danger" href="../lemminkäinen/uloskirjautuminen.php">Log out</a>';
@@ -66,7 +69,7 @@ http://localhost/Lemmikkivuokraamo-frontend/lemmink%C3%A4inen/oheistuotteet.php
               echo "<div>" . "<h2 id='koira'>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
               }
             foreach($products as $p){
-            echo "<div>".$p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . " " . "</br>" .'<button>Osta</button>' . '</div>' . "</br>";
+            echo "<div>". $p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . " " . "</br>" .'<button>Osta</button>' . '</div>' . "</br>"; $p["kuva"];
             }
           ?>
         </div>

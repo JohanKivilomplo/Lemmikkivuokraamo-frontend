@@ -35,7 +35,10 @@
             <a class="nav-link" href="../Lemmikkivuokraamo-frontend/lemminkäinen/lemminkäinen/Ostoskori.php">VUOKRAUS</a>
         </li>
           <li class="nav-item">
-            <a class="nav-link active" href="../lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
+            <a class="nav-link " href="../lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="../lemminkäinen/asiakkaat.php">ASIAKKAAT</a>
           </li>
           <li class="nav-item">
             <?php 

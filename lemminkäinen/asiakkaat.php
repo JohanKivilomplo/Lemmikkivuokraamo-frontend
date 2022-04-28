@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +13,14 @@
     <title>LEMMINKAINEN</title>
 </head>
 <body>
+  <?php require '../php/modules/functions.php'?>
   <header>
       <ul class="nav nav-tabs">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="../index.php">ETUSIVU</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../lemminkäinen/eläimet.php">ELÄIMET</a>
+          <a class="nav-link " href="../lemminkäinen/eläimet.php">ELÄIMET</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../lemminkäinen/PALAUTE.php">PALAUTE</a>
@@ -27,7 +29,7 @@
           <a class="nav-link" href="../lemminkäinen/oheistuotteet.php">OHEISTUOTTEET</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="../lemminkäinen/kamppanja.php">KAMPPANJAT</a>
+            <a class="nav-link" href="../lemminkäinen/kamppanja.php">KAMPPANJAT</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../Lemmikkivuokraamo-frontend/lemminkäinen/lemminkäinen/Ostoskori.php">VUOKRAUS</a>
@@ -36,7 +38,7 @@
             <a class="nav-link " href="../lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="../lemminkäinen/asiakkaat.php">ASIAKKAAT</a>
+            <a class="nav-link active" href="../lemminkäinen/asiakkaat.php">ASIAKKAAT</a>
           </li>
           <li class="nav-item">
             <?php 
@@ -49,31 +51,25 @@
             </li>
       </ul>
   </header>
+<?php
+include "../php/modules/person.php";
 
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <img src="" alt="">
-        <h2>Vuokrattava eläin</h2>
-        <p>info</p>
-        <p>kampanja aika</p>
-      </div>
-      <div class="col">
-        <img src="" alt="">
-        <h2>Vuokrattava eläin</h2>
-        <p>info</p>
-        <p>kampanja aika</p>
-      </div>
-      <div class="col">
-        <img src="" alt="">
-        <h2>Vuokrattava eläin</h2>
-        <p>info</p>
-        <p>kampanja aika</p>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-  </footer>
-</body>
-</html>
+$id = filter_input(INPUT_GET, "asiakasnro");
+// If id parameter exists -> delete
+if(isset($id)){
+    try{
+        deletePerson($id);
+        echo '<div class="alert alert-success" role="alert">Person deleted!!</div>';
+    }catch(Exception $e){
+        echo '<div class="alert alert-danger" role="alert">'.$e->getMessage().'</div>';
+    }
+    
+}
+// Get all people from database
+$people = getPeople();
+// Print person list
+echo "<ul>";
+foreach($people as $p){
+    echo "<li>".$p["etunimi"]." ".$p["sukunimi"].'<a href="asiakkaat.php?id=' . $p["asiakasnro"] . '" class="btn btn-primary">Delete</a> </li>';
+}
+echo "</ul>";
