@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 
 <?php
-    include '../php/modules/authorization.php';
+    include MODULES_DIR.'authorization.php';
 
     if(isset($_SESSION["username"])){
         logout();

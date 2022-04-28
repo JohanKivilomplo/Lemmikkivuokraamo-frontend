@@ -1,6 +1,6 @@
 <?php
 function getDogProducts(){
-    require_once 'db.php';
+    require_once MODULES_DIR.'db.php';
 
     try{
         $pdo = openDb();
@@ -16,7 +16,7 @@ function getDogProducts(){
 }
 
 function getDog(){
-    require_once 'db.php';
+    require_once MODULES_DIR.'db.php';
 
     try{
         $pdo = openDb();
@@ -32,7 +32,7 @@ function getDog(){
 }
 
 function getCat(){
-    require_once 'db.php';
+    require_once MODULES_DIR.'db.php';
 
     try{
         $pdo = openDb();
@@ -48,7 +48,7 @@ function getCat(){
 }
 
 function getCatProducts(){
-    require_once 'db.php';
+    require_once MODULES_DIR.'db.php';
 
     try{
         $pdo = openDb();
@@ -64,7 +64,7 @@ function getCatProducts(){
 }
 
 function getTurtle(){
-    require_once 'db.php';
+    require_once MODULES_DIR.'db.php';
 
     try{
         $pdo = openDb();
@@ -80,7 +80,7 @@ function getTurtle(){
 }
 
 function getTurtleProducts(){
-    require_once 'db.php';
+    require_once MODULES_DIR.'db.php';
 
     try{
         $pdo = openDb();
@@ -96,7 +96,7 @@ function getTurtleProducts(){
 }
 
 function getBird(){
-    require_once 'db.php';
+    require_once MODULES_DIR.'db.php';
 
     try{
         $pdo = openDb();
@@ -112,7 +112,7 @@ function getBird(){
 }
 
 function getBirdProducts(){
-    require_once 'db.php';
+    require_once MODULES_DIR.'db.php';
 
     try{
         $pdo = openDb();
@@ -128,7 +128,7 @@ function getBirdProducts(){
 }
 
 function getSheep(){
-    require_once 'db.php';
+    require_once MODULES_DIR.'db.php';
 
     try{
         $pdo = openDb();
@@ -144,7 +144,7 @@ function getSheep(){
 }
 
 function getSheepProducts(){
-    require_once 'db.php';
+    require_once MODULES_DIR.'db.php';
 
     try{
         $pdo = openDb();
@@ -161,7 +161,7 @@ function getSheepProducts(){
 
 
 function getHorse(){
-    require_once 'db.php';
+    require_once MODULES_DIR.'db.php';
 
     try{
         $pdo = openDb();
@@ -177,7 +177,7 @@ function getHorse(){
 }
 
 function getHorseProducts(){
-    require_once 'db.php';
+    require_once MODULES_DIR.'db.php';
 
     try{
         $pdo = openDb();
@@ -193,7 +193,7 @@ function getHorseProducts(){
 }
 
 function addFeedback($palautenro, $etunimi, $sukunimi, $sahkoposti, $puhelinnro, $palaute) {
-    require_once 'db.php'; // DB connection
+    require_once MODULES_DIR.'db.php';
 
     //Tarkistetaan onko parametreja asetettu
     if( !isset($etunimi) || !isset($sukunimi) || !isset($sahkoposti) || !isset($puhelinnro) || !isset($palaute) ){

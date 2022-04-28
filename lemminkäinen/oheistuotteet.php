@@ -16,7 +16,7 @@
 http://localhost/Lemmikkivuokraamo-frontend/lemmink%C3%A4inen/oheistuotteet.php
 
 <body>
-  <?php require '../php/modules/functions.php'?>
+  <?php require MODULES_DIR.'functions.php'?>
   <header>
       <ul class="nav nav-tabs">
         <li class="nav-item">

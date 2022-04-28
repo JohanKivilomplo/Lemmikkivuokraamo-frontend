@@ -1,7 +1,7 @@
 <?php
 
 function getPeople(){
-    include 'db.php';
+    require_once MODULES_DIR.'db.php';
 
     try{
         $pdo = openDb();
@@ -17,7 +17,7 @@ function getPeople(){
 }
 
 function addPerson($fname, $lname, $email, $puhnro, $osoite, $postinro, $postitmp, $uname, $pw){
-    include 'db.php'; // DB connection
+    require_once MODULES_DIR.'db.php';
     
     //Tarkistetaan onko muttujia asetettu
     if( !isset($fname) || !isset($lname) || !isset($email) || !isset($puhnro) 
@@ -57,15 +57,15 @@ function addPerson($fname, $lname, $email, $puhnro, $osoite, $postinro, $postitm
     }
   }
 
-    $fname = filter_input(INPUT_POST, "fname");
-    $lname = filter_input(INPUT_POST, "lname");
-    $email = filter_input(INPUT_POST, "email");
-    $puhnro = filter_input(INPUT_POST, "puhnro");
-    $osoite = filter_input(INPUT_POST, "osoite");
-    $postinro = filter_input(INPUT_POST, "postinro");
-    $postitmp = filter_input(INPUT_POST, "postitmp");
-    $uname = filter_input(INPUT_POST, "username");
-    $pw = filter_input(INPUT_POST, "pw");
+    $fname = filter_input(INPUT_POST, "fname", FILTER_SANITIZE_SPECIAL_CHARS);
+    $lname = filter_input(INPUT_POST, "lname", FILTER_SANITIZE_SPECIAL_CHARS);
+    $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+    $puhnro = filter_input(INPUT_POST, "puhnro", FILTER_SANITIZE_NUMBER_INT);
+    $osoite = filter_input(INPUT_POST, "osoite", FILTER_SANITIZE_SPECIAL_CHARS);
+    $postinro = filter_input(INPUT_POST, "postinro", FILTER_SANITIZE_NUMBER_INT);
+    $postitmp = filter_input(INPUT_POST, "postitmp", FILTER_SANITIZE_SPECIAL_CHARS);
+    $uname = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
+    $pw = filter_input(INPUT_POST, "pw", FILTER_SANITIZE_SPECIAL_CHARS);
 
 
     if(isset($fname)){
@@ -79,7 +79,7 @@ function addPerson($fname, $lname, $email, $puhnro, $osoite, $postinro, $postitm
     }
 
     function deletePerson($id){
-        require_once 'db.php'; // DB connection
+        require_once MODULES_DIR.'db.php';
         
         //Tarkistetaan onko muttujia asetettu
         if( !isset($id) ){

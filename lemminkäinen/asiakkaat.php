@@ -52,7 +52,7 @@
       </ul>
   </header>
 <?php
-include "../php/modules/person.php";
+include MODULES_DIR."person.php";
 
 $id = filter_input(INPUT_GET, "asiakasnro");
 // If id parameter exists -> delete

@@ -1,7 +1,7 @@
 <?php
 function login($uname, $pw){
 
-    require_once 'db.php';
+    require_once MODULES_DIR. 'db.php';
 
     // $uname = filter_input(INPUT_POST, "username");
     // $pw = filter_input(INPUT_POST, "password");

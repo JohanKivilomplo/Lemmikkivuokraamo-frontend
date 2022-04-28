@@ -49,7 +49,7 @@ div{
 body{
     background-image: url(../lemminkäinen/kuvat/wood-591631_960_720.webp);
     background-repeat: no-repeat;
-    background-size: 150em;
+    background-size: 200em;
 }
 
 .row::after {

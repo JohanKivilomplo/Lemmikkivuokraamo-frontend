@@ -49,7 +49,7 @@
   </header>
   <?php
 
-include '../php/modules/person.php';
+include MODULES_DIR.'person.php';
 ?>
 
   <div class="container">
