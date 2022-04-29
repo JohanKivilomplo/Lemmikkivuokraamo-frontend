@@ -18,7 +18,7 @@ function getPeople(){
 
 function addPerson($fname, $lname, $email, $puhnro, $osoite, $postinro, $postitmp, $uname, $pw){
     require_once MODULES_DIR.'db.php';
-    
+
     //Tarkistetaan onko muttujia asetettu
     if( !isset($fname) || !isset($lname) || !isset($email) || !isset($puhnro) 
     || !isset($osoite) || !isset($postinro) || !isset($postitmp) || !isset($uname) || !isset($pw)) {
@@ -56,27 +56,6 @@ function addPerson($fname, $lname, $email, $puhnro, $osoite, $postinro, $postitm
         throw $e;
     }
   }
-
-    $fname = filter_input(INPUT_POST, "fname", FILTER_SANITIZE_SPECIAL_CHARS);
-    $lname = filter_input(INPUT_POST, "lname", FILTER_SANITIZE_SPECIAL_CHARS);
-    $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
-    $puhnro = filter_input(INPUT_POST, "puhnro", FILTER_SANITIZE_NUMBER_INT);
-    $osoite = filter_input(INPUT_POST, "osoite", FILTER_SANITIZE_SPECIAL_CHARS);
-    $postinro = filter_input(INPUT_POST, "postinro", FILTER_SANITIZE_NUMBER_INT);
-    $postitmp = filter_input(INPUT_POST, "postitmp", FILTER_SANITIZE_SPECIAL_CHARS);
-    $uname = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
-    $pw = filter_input(INPUT_POST, "pw", FILTER_SANITIZE_SPECIAL_CHARS);
-
-
-    if(isset($fname)){
-        try{
-            addPerson($fname, $lname, $email, $puhnro, $osoite, $postinro, $postitmp, $uname, $pw);
-            echo '<div class="alert alert-success" role="alert">Person added!!</div>';
-        }catch(Exception $e){
-            echo '<div class="alert alert-danger" role="alert">'.$e->getMessage().'</div>';
-        }
-        
-    }
 
     function deletePerson($id){
         require_once MODULES_DIR.'db.php';
