@@ -12,6 +12,9 @@
     <title>LEMMINKAINEN</title>
 </head>
 <body>
+
+<?php require '../php/modules/functions.php'?>
+
   <header>
       <ul class="nav nav-tabs">
         <li class="nav-item">
@@ -50,20 +53,60 @@
       </ul>
   </header>
   
-
-    <div class="container">
-        <div class="row">
-          <div class="col-5" class="header">
-            <p class="otsikko"> Vuokrauskysely
-              <?php echo "TESTITEKSTI" ?>
-            </p> <br>
-            <div class="intro">
-              <p> <br> vuokraussivu
-              </p> 
-            </div>
+  
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <div class="h3">
+        Vuokrauskysely 
+        </div>
+        <div>
+          <img src="..\lemminkäinen\kuvat\goats-1993649_960_720.jpg" alt="">
+        </div>
+        <form action="Ostoskori.php" method="post">
+          <div class="form-group">
+            <label for="etunimi">Etunimi</label>
+            <input type="text" class="form-control" name="etunimi" id="etunimi" placeholder="Etunimi">
           </div>
-          <div id="profile" class="col-5">
-            <img src="../lemminkäinen/kuvat/sheep.jpg">
+          <div class="form-group">
+            <label for="sukunimi">Sukunimi</label>
+            <input type="text" class="form-control" name="sukunimi" id="sukunimi" placeholder="Sukunimi">
+          </div>
+          <div class="form-group">
+            <label for="email">Sähköposti</label>
+            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Syötä sähköpostiosoitteesi">
+          </div>
+          <div class="form-group">
+            <label for="phone">Puhelinnumero</label>
+            <input type="tel" class="form-control" name="phonenumber" id="phonenumber" placeholder="Puhelinnumero">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Lisätietoa</label>
+            <textarea class="form-control" name="palautelaatikko" id="palautelaatikko" rows="3" placeholder="Minkälaisesta tapahtumasta on kyse?"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary m-2">Lähetä</button>
+        </form>
+      </div>
+    </div>
+  </div>
+              
+//  <?php
+//$etunimi = filter_input(INPUT_POST, "etunimi");
+//$sukunimi = filter_input(INPUT_POST, "sukunimi");
+//$sahkoposti = filter_input(INPUT_POST, "email");
+//$puhelinnro = filter_input(INPUT_POST, "phonenumber");
+//$palaute = filter_input(INPUT_POST, "palautelaatikko");
+    
+//if(isset($etunimi)){
+  //  addVuokra($etunimi, $sukunimi, $sahkoposti, $puhelinnro);
+  //  echo '<div class="alert alert-success" role="alert">Kysely lähetetty!!</div>';
+//}
+
+//$selectedID = isset($etunimi) ? $etunimi : 0;
+?> 
+
+            </div>
           </div>
         </div>
       </div>
