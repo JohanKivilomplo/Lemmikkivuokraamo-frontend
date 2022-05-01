@@ -49,11 +49,12 @@
             </li>
       </ul>
   </header>
+  
 
     <div class="container">
         <div class="row">
           <div class="col-5" class="header">
-            <p class="otsikko">Lemmikkivuokraamo Lemminkäinen
+            <p class="otsikko"> Vuokrauskysely
               <?php echo "TESTITEKSTI" ?>
             </p> <br>
             <div class="intro">
