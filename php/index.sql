@@ -88,7 +88,7 @@ INSERT INTO ELAIN(rotu, hinta, tietoa, lajinro)
     ("Ragdoll", "30", "Nimi: LIISA",2),
     ("Shetlanninponi", "100", "Nimi: JONI",6),
     ("Friisiläinen", "100", "Nimi: Pertti", 6),
-    ("Suomenhevonen, "100", "Nimi: Freya", 6),
+    ("Suomenhevonen", "100", "Nimi: Freya", 6),
     ("Suomenlammas", "50", "Nimi: Esteri", 5),
     ("Afrikanpikkuvuohi", "50", "Nimi: Lucifer", 5),
     ("Nelivarvaskilpikonna", "40", "Nimi:  MUIKEA-MARKO", 3),
@@ -115,14 +115,14 @@ VALUES
 ("Harja","12","50",6,"Hevosen turkin ja harjaksen...harjaukseen.")
 ;
 
-INSERT INTO asiakas(etunimi,sukunimi,sposti,puhnro,osoite,postinro,postitm,salasana,username)
+INSERT INTO asiakas(etunimi,sukunimi,sposti,puhnro,osoite,postinro,postitmp,salasana,username)
 VALUES
-("Tiina","Säkkijärvi","tiina.säkkij@gmail.com","0406543218","Kekkiläkatu 23","12331","","",""),
-("Pekka","Heikkinen","pekkahei@hotmail.com","0405654961","Kaarnapolku 55","34521","","",""),
-("Vilho","Westerinen","vwest@outlook.fi","0504564351","Möykkymäki 95","234523","","",""),
-("Hanna","Koilinen","HKsininen@suomi24.fi","0446541651","Siivouskuja 32","3244234","","",""),
-("Pietu","Reppuli","baggins@hotmail.com","0506146158","501 Buckland Road","3472","","",""),
-("Sakke","Ensiö","enska@gmail.com","08421548","Monument street 451","97685","","",""),
-("Kaarina","Poikkila","poikki@hotmail.com","0505165168","Puukuja 11","45689","","",""),
-("Diandra","Riihilä","driihi@outlook.fi","0406516515","High-port 79","00456","","",""),
+("Tiina","Säkkijärvi","tiina.säkkij@gmail.com","0406543218","Kekkiläkatu 23","12331","Hattula","","Tiinuska"),
+("Pekka","Heikkinen","pekkahei@hotmail.com","0405654961","Kaarnapolku 55","34521","Jokela","","PekkaHeikkinen"),
+("Vilho","Westerinen","vwest@outlook.fi","0504564351","Möykkymäki 95","234523","Närpiö","","West"),
+("Hanna","Koilinen","HKsininen@suomi24.fi","0446541651","Siivouskuja 32","3244234","Loimaa","","KoilinenH"),
+("Pietu","Reppuli","baggins@hotmail.com","0506146158","501 Buckland Road","3472","Auckland","","Bilbo"),
+("Sakke","Ensiö","enska@gmail.com","08421548","Monument street 451","97685","Wasteland","","Enska"),
+("Kaarina","Poikkila","poikki@hotmail.com","0505165168","Puukuja 11","45689","Kannelmäki","","Kaarna"),
+("Diandra","Riihilä","driihi@outlook.fi","0406516515","High-port 79","00456","Turmiola","","DD")
 ;
