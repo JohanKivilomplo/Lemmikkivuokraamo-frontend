@@ -59,7 +59,6 @@
               <p>Koirat</p>
                 <div class="cards">
                   <div class="card">
-                    <h2><a href="#">Title</a></h2>
                     <p>
                       <?php
                       function getCarita(){
@@ -93,7 +92,6 @@
                   </div>
 
                   <div class="card">
-                    <h2><a href="#">Title</a></h2>
                     <p>
                       <?php
                       function getBenjamin(){
@@ -102,7 +100,7 @@
                         try{
                             $pdo = openDb();
                             // Create SQL query to get all rows from a table
-                            $sql = "SELECT * FROM ELAIN WHERE elainID = 5";
+                            $sql = "SELECT * FROM ELAIN WHERE elainID = 2";
                             // Execute the query
                             $people = $pdo->query($sql);
 
@@ -126,15 +124,7 @@
                     <p>Some article description stuff.</p>
                   </div>
 
-                  <div class="card">
-                    <h2><a href="#">Title</a></h2>
-                    <p>Some article description stuff.</p>
-                  </div>
-                  
-                  <div class="card">
-                    <h2><a href="#">Title</a></h2>
-                    <p>Some article description stuff.</p>
-                  </div>
+                 
 
                 </div>
             </div>
@@ -142,78 +132,216 @@
             <div class="elain m-4">
               <p>Kissat</p>
               <div class="cards">
-                <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
-                <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
-                <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
-                <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
-                <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
+              <div class="card">
+                    <p>
+                      <?php
+                      function getJohan(){
+                        require_once '../php/modules/db.php';
+
+                        try{
+                            $pdo = openDb();
+                            // Create SQL query to get all rows from a table
+                            $sql = "SELECT * FROM ELAIN WHERE elainID = 3";
+                            // Execute the query
+                            $people = $pdo->query($sql);
+
+                            return $people->fetchAll();
+                        }catch(PDOException $e){
+                            throw $e;
+                        }
+                    }
+                    ?>
+                    </p>
+                  <?php $JOHAN = getJohan() ?>
+
+                  </div>
+                  <div class="card">
+                    <h2><a href="#">
+                      <?php             
+                      foreach($JOHAN as $a){
+                      echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
+                      } ?>
+                      </a></h2>
+                    <p>Some article description stuff.</p>
+                  </div>
+
+                  <div class="card">
+                    <p>
+                      <?php
+                      function getLiisa(){
+                        require_once '../php/modules/db.php';
+
+                        try{
+                            $pdo = openDb();
+                            // Create SQL query to get all rows from a table
+                            $sql = "SELECT * FROM ELAIN WHERE elainID = 4";
+                            // Execute the query
+                            $people = $pdo->query($sql);
+
+                            return $people->fetchAll();
+                        }catch(PDOException $e){
+                            throw $e;
+                        }
+                    }
+                    ?>
+                    </p>
+                  <?php $LIISA = getLiisa() ?>
+
+                  </div>
+                  <div class="card">
+                    <h2><a href="#">
+                      <?php             
+                      foreach($LIISA as $a){
+                      echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
+                      } ?>
+                      </a></h2>
+                    <p>Some article description stuff.</p>
+                  </div>
+                
               </div>
           </div>
 
             <div class="elain m-4">
               <p>Linnut</p>
               <div class="cards">
-                <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
-                <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
-                <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
-                <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
-                <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
+              <div class="card">
+                    <p>
+                      <?php
+                      function getLeila(){
+                        require_once '../php/modules/db.php';
+
+                        try{
+                            $pdo = openDb();
+                            // Create SQL query to get all rows from a table
+                            $sql = "SELECT * FROM ELAIN WHERE elainID = 5";
+                            // Execute the query
+                            $people = $pdo->query($sql);
+
+                            return $people->fetchAll();
+                        }catch(PDOException $e){
+                            throw $e;
+                        }
+                    }
+                    ?>
+                    </p>
+                  <?php $LEILA = getLeila() ?>
+
+                  </div>
+                  <div class="card">
+                    <h2><a href="#">
+                      <?php             
+                      foreach($LEILA as $a){
+                      echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
+                      } ?>
+                      </a></h2>
+                    <p>Some article description stuff.</p>
+                  </div>
+
+                  <div class="card">
+                    <p>
+                      <?php
+                      function getTommi(){
+                        require_once '../php/modules/db.php';
+
+                        try{
+                            $pdo = openDb();
+                            // Create SQL query to get all rows from a table
+                            $sql = "SELECT * FROM ELAIN WHERE elainID = 6";
+                            // Execute the query
+                            $people = $pdo->query($sql);
+
+                            return $people->fetchAll();
+                        }catch(PDOException $e){
+                            throw $e;
+                        }
+                    }
+                    ?>
+                    </p>
+                  <?php $TOMMI = getTommi() ?>
+
+                  </div>
+                  <div class="card">
+                    <h2><a href="#">
+                      <?php             
+                      foreach($TOMMI as $a){
+                      echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
+                      } ?>
+                      </a></h2>
+                    <p>Some article description stuff.</p>
+                  </div>
+
               </div>
           </div>
 
             <div class="elain m-4">
               <p>Lampaat ja vuohet</p>
               <div class="cards">
+              <div class="card">
+                    <p>
+                      <?php
+                      function getEsteri(){
+                        require_once '../php/modules/db.php';
+
+                        try{
+                            $pdo = openDb();
+                            // Create SQL query to get all rows from a table
+                            $sql = "SELECT * FROM ELAIN WHERE elainID = 10";
+                            // Execute the query
+                            $people = $pdo->query($sql);
+
+                            return $people->fetchAll();
+                        }catch(PDOException $e){
+                            throw $e;
+                        }
+                    }
+                    ?>
+                    </p>
+                  <?php $ESTERI = getEsteri() ?>
+
+                  </div>
+                  <div class="card">
+                    <h2><a href="#">
+                      <?php             
+                      foreach($ESTERI as $a){
+                      echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
+                      } ?>
+                      </a></h2>
+                    <p>Some article description stuff.</p>
+                  </div>
+
                 <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
-                <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
-                <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
-                <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
-                <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
+                    <p>
+                      <?php
+                      function getLucifer(){
+                        require_once '../php/modules/db.php';
+
+                        try{
+                            $pdo = openDb();
+                            // Create SQL query to get all rows from a table
+                            $sql = "SELECT * FROM ELAIN WHERE elainID = 11";
+                            // Execute the query
+                            $people = $pdo->query($sql);
+
+                            return $people->fetchAll();
+                        }catch(PDOException $e){
+                            throw $e;
+                        }
+                    }
+                    ?>
+                    </p>
+                  <?php $LUCIFER = getLucifer() ?>
+
+                  </div>
+                  <div class="card">
+                    <h2><a href="#">
+                      <?php             
+                      foreach($LUCIFER as $a){
+                      echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
+                      } ?>
+                      </a></h2>
+                    <p>Some article description stuff.</p>
+                  </div>
+
               </div>
           </div>
 
@@ -223,51 +351,176 @@
               <p>Hevoset ja ponit</p>
               <div class="cards">
                 <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
+                    <p>
+                      <?php
+                      function getJoni(){
+                        require_once '../php/modules/db.php';
+
+                        try{
+                            $pdo = openDb();
+                            // Create SQL query to get all rows from a table
+                            $sql = "SELECT * FROM ELAIN WHERE elainID = 7";
+                            // Execute the query
+                            $people = $pdo->query($sql);
+
+                            return $people->fetchAll();
+                        }catch(PDOException $e){
+                            throw $e;
+                        }
+                    }
+                    ?>
+                    </p>
+                  <?php $JONI = getJoni() ?>
+
+                  </div>
+                  <div class="card">
+                    <h2><a href="#">
+                      <?php             
+                      foreach($JONI as $a){
+                      echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
+                      } ?>
+                      </a></h2>
+                    <p>Some article description stuff.</p>
+                  </div>
+
                 <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
+                    <p>
+                      <?php
+                      function getPertti(){
+                        require_once '../php/modules/db.php';
+
+                        try{
+                            $pdo = openDb();
+                            // Create SQL query to get all rows from a table
+                            $sql = "SELECT * FROM ELAIN WHERE elainID = 8";
+                            // Execute the query
+                            $people = $pdo->query($sql);
+
+                            return $people->fetchAll();
+                        }catch(PDOException $e){
+                            throw $e;
+                        }
+                    }
+                    ?>
+                    </p>
+                  <?php $PERTTI = getPertti() ?>
+
+                  </div>
+                  <div class="card">
+                    <h2><a href="#">
+                      <?php             
+                      foreach($PERTTI as $a){
+                      echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
+                      } ?>
+                      </a></h2>
+                    <p>Some article description stuff.</p>
+                  </div>
+
                 <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
-                <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
-                <div class="card">
-                  <h2><a href="#">Title</a></h2>
-                  <p>Some article description stuff.</p>
-                </div>
+                    <p>
+                      <?php
+                      function getFreya(){
+                        require_once '../php/modules/db.php';
+
+                        try{
+                            $pdo = openDb();
+                            // Create SQL query to get all rows from a table
+                            $sql = "SELECT * FROM ELAIN WHERE elainID = 9";
+                            // Execute the query
+                            $people = $pdo->query($sql);
+
+                            return $people->fetchAll();
+                        }catch(PDOException $e){
+                            throw $e;
+                        }
+                    }
+                    ?>
+                    </p>
+                  <?php $FREYA = getFreya() ?>
+
+                  </div>
+                  <div class="card">
+                    <h2><a href="#">
+                      <?php             
+                      foreach($FREYA as $a){
+                      echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
+                      } ?>
+                      </a></h2>
+                    <p>Some article description stuff.</p>
+                  </div>
+                
               </div>
           </div>
 
             <div class="elain m-4">
               <p>Kilpikonnat</p>
               <div class="cards">
-                  <div class="card">
-                    <h2><a href="#">Title</a></h2>
-                    <p>Some article description stuff.</p>
+              <div class="card">
+                    <p>
+                      <?php
+                      function getMarko(){
+                        require_once '../php/modules/db.php';
+
+                        try{
+                            $pdo = openDb();
+                            // Create SQL query to get all rows from a table
+                            $sql = "SELECT * FROM ELAIN WHERE elainID = 12";
+                            // Execute the query
+                            $people = $pdo->query($sql);
+
+                            return $people->fetchAll();
+                        }catch(PDOException $e){
+                            throw $e;
+                        }
+                    }
+                    ?>
+                    </p>
+                  <?php $MARKO = getMarko() ?>
+
                   </div>
                   <div class="card">
-                    <h2><a href="#">Title</a></h2>
+                    <h2><a href="#">
+                      <?php             
+                      foreach($MARKO as $a){
+                      echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
+                      } ?>
+                      </a></h2>
                     <p>Some article description stuff.</p>
+                  </div>
+
+                  <div class="card">
+                    <p>
+                      <?php
+                      function getKalle(){
+                        require_once '../php/modules/db.php';
+
+                        try{
+                            $pdo = openDb();
+                            // Create SQL query to get all rows from a table
+                            $sql = "SELECT * FROM ELAIN WHERE elainID = 13";
+                            // Execute the query
+                            $people = $pdo->query($sql);
+
+                            return $people->fetchAll();
+                        }catch(PDOException $e){
+                            throw $e;
+                        }
+                    }
+                    ?>
+                    </p>
+                  <?php $KALLE = getKalle() ?>
+
                   </div>
                   <div class="card">
-                    <h2><a href="#">Title</a></h2>
+                    <h2><a href="#">
+                      <?php             
+                      foreach($KALLE as $a){
+                      echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
+                      } ?>
+                      </a></h2>
                     <p>Some article description stuff.</p>
                   </div>
-                  <div class="card">
-                    <h2><a href="#">Title</a></h2>
-                    <p>Some article description stuff.</p>
-                  </div>
-                  <div class="card">
-                    <h2><a href="#">Title</a></h2>
-                    <p>Some article description stuff.</p>
-                  </div>
+                  
                 </div>
             </div>
           </div>
@@ -278,7 +531,7 @@
     <div class="container">
       <div class="row">
         <p>
-        Made by :  OAMK TIETOJENKÄSITTELY 12/2021 
+        Made by :  OAMK TIETOJENKÄSITTELY 5/2022
         </p>
       </div>
     </div>

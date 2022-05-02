@@ -86,6 +86,8 @@ INSERT INTO ELAIN(rotu, hinta, tietoa, lajinro)
     ("Mäyräkoira", "30", "Nimi: BENJAMIN",1),
     ("Sfinx", "30", "Nimi: JOHAN",2),
     ("Ragdoll", "30", "Nimi: LIISA",2),
+    ("Papukaija", "25", "Nimi: LEILA",4),
+    ("Tirppa", "20", "Nimi: TOMMI",4),
     ("Shetlanninponi", "100", "Nimi: JONI",6),
     ("Friisiläinen", "100", "Nimi: Pertti", 6),
     ("Suomenhevonen", "100", "Nimi: Freya", 6),
