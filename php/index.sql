@@ -44,14 +44,20 @@ FOREIGN KEY (asiakasnro) REFERENCES ASIAKAS(asiakasnro)
 );
 
 CREATE TABLE KAMPPANJA (
-    vuokrausnro INT NOT NULL PRIMARY KEY,
+    kamppanjaID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     elainID INT,
+    lajinro INT,
     info TEXT NOT NULL,
     apvm DATE,
     lpvm DATE,
-    FOREIGN KEY (vuokrausnro) REFERENCES VUOKRA(vuokrausnro),
-    FOREIGN KEY (elainID) REFERENCES ELAIN(elainID)
+    UNIQUE(kamppanjaID),
+    FOREIGN KEY (elainID) REFERENCES ELAIN(elainID),
+    FOREIGN KEY (lajinro) REFERENCES LAJI(lajinro)
+    
 );
+
+
+
 
 CREATE Table palaute (
     palautenro INT(255) PRIMARY KEY AUTO_INCREMENT,
@@ -98,6 +104,15 @@ INSERT INTO ELAIN(rotu, hinta, tietoa, lajinro)
 
 ;
 
+
+INSERT INTO KAMPPANJA(elainID, lajinro, info, apvm, lpvm)
+    VALUES
+    (2, NULL, "Benjaminin vuokraajalle koiran korkokengät kaupanpäälle(Kamppanja pakollinen koska koira ei lähde muuten mihinkään)", 2022-05-01,2023-05-01),
+    (NULL,2, "Kissan vuokraajalle mikätahansa oheis tuote puoleen hintaan", 2022-05-01,2022-07-01)
+
+
+;
+
 INSERT INTO oheistuotteet(tuote,hinta,maara,lajinro,info)
 VALUES
 ("Puruluu","8,5","200",1,"Pidä karvaturrisi suu terveenä."),
@@ -114,7 +129,9 @@ VALUES
 
 ("Turkinhoitopaketti","20","10",5,"Eläimen turkin harjaaminen voi olla hyvin rauhoittavaa."),
 
-("Harja","12","50",6,"Hevosen turkin ja harjaksen...harjaukseen.")
+("Harja","12","50",6,"Hevosen turkin ja harjaksen...harjaukseen."),
+
+("Koirien korkokengät","15","4",1,"Jos koirasi on hieman epävarma pituudestaan on tämä oiva asuste")
 ;
 
 INSERT INTO asiakas(etunimi,sukunimi,sposti,puhnro,osoite,postinro,postitmp,salasana,username)
