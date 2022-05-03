@@ -69,7 +69,7 @@ http://localhost/Lemmikkivuokraamo-frontend/lemmink%C3%A4inen/oheistuotteet.php
               echo "<div>" . "<h2 id='koira'>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
               }
             foreach($products as $p){
-            echo "<div>". $p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . " " . "</br>" .'<button>Osta</button>' . '</div>' . "</br>"; $p["kuva"];
+            echo "<div>". $p["tuote"]." ".$p["hinta"]."€"."</br>".$p["info"] . " " . "</br>" .'<button>Osta</button>' . '</div>' . "</br>";
             }
           ?>
         </div>

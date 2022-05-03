@@ -70,6 +70,6 @@ $people = getPeople();
 // Print person list
 echo "<ul>";
 foreach($people as $p){
-    echo "<li>".$p["etunimi"]." ".$p["sukunimi"].'<a href="asiakkaat.php?id=' . $p["asiakasnro"] . '" class="btn btn-primary">Delete</a> </li>';
+    echo "<li>".$p["etunimi"]." ".$p["sukunimi"].'<a href="asiakkaat.php?asiakasnro=' . $p["asiakasnro"] . '" class="btn btn-primary">Delete</a> </li>';
 }
 echo "</ul>";
