@@ -108,7 +108,8 @@ INSERT INTO ELAIN(rotu, hinta, tietoa, lajinro)
 INSERT INTO KAMPPANJA(elainID, lajinro, info, apvm, lpvm)
     VALUES
     (2, NULL, "Benjaminin vuokraajalle koiran korkokengät kaupanpäälle(Kamppanja pakollinen koska koira ei lähde muuten mihinkään)", 2022-05-01,2023-05-01),
-    (NULL,2, "Kissan vuokraajalle mikätahansa oheis tuote puoleen hintaan", 2022-05-01,2022-07-01)
+    (NULL,2, "Kissan vuokraajalle mikätahansa oheistuote puoleen hintaan", "2022-05-01","2022-07-01"),
+    (NULL,2, "Kissanhiekka kaupan päälle vuokrauksen yhteydessä", "2022-05-01","2022-07-01")
 
 
 ;

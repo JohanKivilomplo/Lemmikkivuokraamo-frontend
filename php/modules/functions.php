@@ -192,6 +192,26 @@ function getHorseProducts(){
     }
 }
 
+function getCatCampaigns(){
+    require_once MODULES_DIR.'db.php';
+
+    try{
+        $pdo = openDb();
+        // Create SQL query to get all rows from a table
+        $sql = "SELECT * FROM KAMPPANJA WHERE lajinro = 2";
+        // Execute the query
+        $people = $pdo->query($sql);
+
+        return $people->fetchAll();
+    }catch(PDOException $e){
+        throw $e;
+    }
+}
+
+
+
+
+
 function addFeedback($palautenro, $etunimi, $sukunimi, $sahkoposti, $puhelinnro, $palaute) {
     require_once MODULES_DIR.'db.php';
 
