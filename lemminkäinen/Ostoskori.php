@@ -35,8 +35,8 @@
         <li class="nav-item">
             <a class="nav-link" href="../Lemmikkivuokraamo-frontend/lemminkäinen/lemminkäinen/Ostoskori.php">VUOKRAUS</a>
         </li>
-          <li class="nav-item">
-            <a class="nav-link" href="lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
+        <li class="nav-item">
+            <a class="nav-link " href="../lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
           </li>
           <li class="nav-item">
             <a class="nav-link " href="../lemminkäinen/asiakkaat.php">ASIAKKAAT</a>
@@ -61,7 +61,7 @@
         Vuokrauskysely 
         </div>
         <div>
-          <img src="..\lemminkäinen\kuvat\goats-1993649_960_720.jpg" alt="">
+          <img id="ostoskoriImg" src="..\lemminkäinen\kuvat\goats-1993649_960_720.jpg" alt="">
         </div>
         <form action="Ostoskori.php" method="post">
           <div class="form-group">
@@ -73,24 +73,54 @@
             <input type="text" class="form-control" name="sukunimi" id="sukunimi" placeholder="Sukunimi">
           </div>
           <div class="form-group">
-            <label for="email">Sähköposti</label>
-            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Syötä sähköpostiosoitteesi">
+            <label for="apvm">Aloituspäivämäärä</label>
+            <input type="apmv" class="form-control" name="apvm" id="apvm" placeholder="DD/MM/YYY">
           </div>
           <div class="form-group">
-            <label for="phone">Puhelinnumero</label>
-            <input type="tel" class="form-control" name="phonenumber" id="phonenumber" placeholder="Puhelinnumero">
+            <label for="lpvm">Lopetuspäivämäärä</label>
+            <input type="lpvm" class="form-control" name="lpvm" id="lpvm" placeholder="DD/MM/YYY">
           </div>
           <div class="form-group">
             <label for="exampleFormControlTextarea1">Lisätietoa</label>
-            <textarea class="form-control" name="palautelaatikko" id="palautelaatikko" rows="3" placeholder="Minkälaisesta tapahtumasta on kyse?"></textarea>
+            <textarea class="form-control" name="lisatietoa" id="lisatietoa" rows="3" placeholder="Minkälaisesta tapahtumasta on kyse? Toivotteko jotain tiettyä yksilöä?"></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary m-2">Lähetä</button>
+          <input type='radio' name='lajinro' value="koira"/> KOIRA
+          <input type='radio' name='lajinro' value="kissa"/> KISSA
+          <input type='radio' name='lajinro' value="kilpikonna"/> KILPIKONNA
+          <input type='radio' name='lajinro' value="lammas"/> LAMMAS/VUOHI
+          <input type='radio' name='lajinro' value="hevonen"/> HEVONEN/PONI
+          <br>
+
+          <button type="submit" class="btn btn-primary m-2" name="send">Lähetä</button>
         </form>
       </div>
     </div>
   </div>
-              
+
+<?php
+$connection = mysqli_connect("localhost", "root", "");
+$db = mysqli_select_db($connection,'lemmikkivuokraamo' );
+
+if(isset($_POST['send'])){
+  $etunimi = filter_input(INPUT_POST, "etunimi");
+  $sukunimi = filter_input(INPUT_POST, "sukunimi");
+  $apvm = filter_input(INPUT_POST, "apvm");
+  $lpvm = filter_input(INPUT_POST, "lpvm");
+  $lisatietoa = filter_input(INPUT_POST, "lisatietoa");
+  $elain = filter_input(INPUT_POST, "elain");
+
+  $query = "INSERT INTO 'vuokra' ('etunimi', 'sukunimi', 'apvm', 'lpvm', 'lisatietoa', 'elain') VALUES ('$etunimi', '$sukunimi', '$apvm', '$lpvm', '$lisatietoa','$elain')";
+  $query_run = mysqli_query($connection, $query);
+
+  if($query_run){
+    echo '<script type="text/javascript"> alert("Kysely lähetetty!") </script>';
+  } else{
+    echo '<script type="text/javascript"> alert("Kyselyn lähetys epäonnistui.") </script>';
+
+  }
+}
+?>              
 //  <?php
 //$etunimi = filter_input(INPUT_POST, "etunimi");
 //$sukunimi = filter_input(INPUT_POST, "sukunimi");
