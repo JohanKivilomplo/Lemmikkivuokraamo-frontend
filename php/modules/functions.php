@@ -192,6 +192,22 @@ function getHorseProducts(){
     }
 }
 
+function getDogCampaigns(){
+    require_once MODULES_DIR.'db.php';
+
+    try{
+        $pdo = openDb();
+        // Create SQL query to get all rows from a table
+        $sql = "SELECT * FROM KAMPPANJA WHERE lajinro = 1";
+        // Execute the query
+        $people = $pdo->query($sql);
+
+        return $people->fetchAll();
+    }catch(PDOException $e){
+        throw $e;
+    }
+}
+
 function getCatCampaigns(){
     require_once MODULES_DIR.'db.php';
 
@@ -209,6 +225,69 @@ function getCatCampaigns(){
 }
 
 
+function getTurtleCampaigns(){
+    require_once MODULES_DIR.'db.php';
+
+    try{
+        $pdo = openDb();
+        // Create SQL query to get all rows from a table
+        $sql = "SELECT * FROM KAMPPANJA WHERE lajinro = 3";
+        // Execute the query
+        $people = $pdo->query($sql);
+
+        return $people->fetchAll();
+    }catch(PDOException $e){
+        throw $e;
+    }
+}
+
+function getBirdCampaigns(){
+    require_once MODULES_DIR.'db.php';
+
+    try{
+        $pdo = openDb();
+        // Create SQL query to get all rows from a table
+        $sql = "SELECT * FROM KAMPPANJA WHERE lajinro = 4";
+        // Execute the query
+        $people = $pdo->query($sql);
+
+        return $people->fetchAll();
+    }catch(PDOException $e){
+        throw $e;
+    }
+}
+
+function getSheepCampaigns(){
+    require_once MODULES_DIR.'db.php';
+
+    try{
+        $pdo = openDb();
+        // Create SQL query to get all rows from a table
+        $sql = "SELECT * FROM KAMPPANJA WHERE lajinro = 5";
+        // Execute the query
+        $people = $pdo->query($sql);
+
+        return $people->fetchAll();
+    }catch(PDOException $e){
+        throw $e;
+    }
+}
+
+function getHorseCampaigns(){
+    require_once MODULES_DIR.'db.php';
+
+    try{
+        $pdo = openDb();
+        // Create SQL query to get all rows from a table
+        $sql = "SELECT * FROM KAMPPANJA WHERE lajinro = 6";
+        // Execute the query
+        $people = $pdo->query($sql);
+
+        return $people->fetchAll();
+    }catch(PDOException $e){
+        throw $e;
+    }
+}
 
 
 

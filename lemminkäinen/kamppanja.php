@@ -69,18 +69,21 @@
     ?>
 </div>
 
-  <div class="col">
-        <img src="" alt="">
-        <h2>Vuokrattava eläin</h2>
-        <p>info</p>
-        <p>kampanja aika</p>
-  </div>
-  <div class="col">
-        <img src="" alt="">
-        <h2>Vuokrattava eläin</h2>
-        <p>info</p>
-        <p>kampanja aika</p>
-  </div>
+<div class="col card" id="DogCampaings">
+    <?php
+    $campaings = getDogCampaigns();
+    $animal = getDog();
+
+    foreach($animal as $a){
+      echo "<div class='card-header'>" . "<h2 class='card-title' id='koira'>" . $a["lajinimi"] . "</h2>" . '</div>'. "</br>";
+      }
+    foreach($campaings as $c){
+    echo "<div class='list-group-item' id='kamppanjadiv'>" . "<p class='card-subtitle fw-bolder' id='kamppanjatxt'>" .$c["info"] . " ". "</p>". "</br>". "<p class='fw-normal' >Kamppanja alkaa ". "</p>" .$c["apvm"]. "</br>". "<p class='fw-normal' >Kamppanja loppuu ". "</p>" .$c["lpvm"]. '</div>'. "</br>";
+    }
+    ?>
+</div>
+
+
   </div>
 </div>
 
