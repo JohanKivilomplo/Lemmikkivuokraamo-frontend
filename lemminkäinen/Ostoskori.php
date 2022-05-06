@@ -56,11 +56,11 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-4">
-        <div class="h3">
-        Vuokrauskysely 
+        <div >
+        <h3>Vuokrauskysely</h3>
         </div>
-        <div>
-          <img id="ostoskoriImg" src="..\lemminkäinen\kuvat\goats-1993649_960_720.jpg" alt="">
+        <div style = "position:relative; left:-40%; top:2px;">
+          <img id="ostoskoriImg" src="..\lemminkäinen\kuvat\goats-1993649_960_720.jpg" >
         </div>
         <form action="Ostoskori.php" method="post">
           <div class="form-group">

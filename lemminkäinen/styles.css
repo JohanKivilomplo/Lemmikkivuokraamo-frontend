@@ -110,3 +110,19 @@ body{
     transform: translateX(2rem);
 }
 
+/*vuokraussivu*/
+form{
+    border-style: solid;
+    border-color: rgb(0, 0, 111);
+    border-radius: 3%;
+    background-color: azure;
+}
+h3{
+    color: rgb(255, 255, 255);
+    position: relative;
+    top: 0;
+    left: 30%;
+}
+#ostoskoriImg{ 
+    float:center; 
+}
