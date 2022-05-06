@@ -12,7 +12,6 @@
     <title>LEMMINKAINEN</title>
 </head>
 <body>
-
 <?php require '../php/modules/functions.php'?>
 
   <header>
@@ -85,56 +84,42 @@
             <textarea class="form-control" name="lisatietoa" id="lisatietoa" rows="3" placeholder="Minkälaisesta tapahtumasta on kyse? Toivotteko jotain tiettyä yksilöä?"></textarea>
           </div>
 
-          <input type='radio' name='lajinro' value="koira"/> KOIRA
-          <input type='radio' name='lajinro' value="kissa"/> KISSA
-          <input type='radio' name='lajinro' value="kilpikonna"/> KILPIKONNA
-          <input type='radio' name='lajinro' value="lammas"/> LAMMAS/VUOHI
-          <input type='radio' name='lajinro' value="hevonen"/> HEVONEN/PONI
+        
+          
+          <input type='radio' name='lajinro' value="1" /> KOIRA
+          <input type='radio' name='lajinro' value="2" /> KISSA
+          <input type='radio' name='lajinro' value="3" />  KILPIKONNA
+          <input type='radio' name='lajinro' value="4" />  LINTU <br>
+          <input type='radio' name='lajinro' value="5" />  LAMMAS/VUOHI
+          <input type='radio' name='lajinro' value="6" />  HEVONEN/PONI
           <br>
-
-          <button type="submit" class="btn btn-primary m-2" name="send">Lähetä</button>
+          <button type="submit" class="btn btn-primary m-2" name="send" value="send">Lähetä</button>
         </form>
       </div>
     </div>
   </div>
 
+
+
 <?php
-$connection = mysqli_connect("localhost", "root", "");
-$db = mysqli_select_db($connection,'lemmikkivuokraamo' );
 
-if(isset($_POST['send'])){
-  $etunimi = filter_input(INPUT_POST, "etunimi");
-  $sukunimi = filter_input(INPUT_POST, "sukunimi");
-  $apvm = filter_input(INPUT_POST, "apvm");
-  $lpvm = filter_input(INPUT_POST, "lpvm");
-  $lisatietoa = filter_input(INPUT_POST, "lisatietoa");
-  $elain = filter_input(INPUT_POST, "elain");
 
-  $query = "INSERT INTO 'vuokra' ('etunimi', 'sukunimi', 'apvm', 'lpvm', 'lisatietoa', 'elain') VALUES ('$etunimi', '$sukunimi', '$apvm', '$lpvm', '$lisatietoa','$elain')";
-  $query_run = mysqli_query($connection, $query);
 
-  if($query_run){
-    echo '<script type="text/javascript"> alert("Kysely lähetetty!") </script>';
-  } else{
-    echo '<script type="text/javascript"> alert("Kyselyn lähetys epäonnistui.") </script>';
+    $vuokrausnro = "";  
+    $etunimi = filter_input(INPUT_POST, "etunimi");
+    $sukunimi = filter_input(INPUT_POST, "sukunimi");
+    $apvm =filter_input(INPUT_POST, "apvm");
+    $lpvm = filter_input(INPUT_POST, "lpvm");
+    $lisatietoa =filter_input(INPUT_POST, "lisatietoa");
+    $lajinro = filter_input(INPUT_POST, "lajinro");
 
-  }
-}
-?>              
-//  <?php
-//$etunimi = filter_input(INPUT_POST, "etunimi");
-//$sukunimi = filter_input(INPUT_POST, "sukunimi");
-//$sahkoposti = filter_input(INPUT_POST, "email");
-//$puhelinnro = filter_input(INPUT_POST, "phonenumber");
-//$palaute = filter_input(INPUT_POST, "palautelaatikko");
-    
-//if(isset($etunimi)){
-  //  addVuokra($etunimi, $sukunimi, $sahkoposti, $puhelinnro);
-  //  echo '<div class="alert alert-success" role="alert">Kysely lähetetty!!</div>';
-//}
+    if(isset($etunimi)){
+      addVuokra($vuokrausnro, $etunimi, $sukunimi, $apvm, $lpvm, $lisatietoa,$lajinro);
+        echo '<div class="alert alert-success" role="alert">Kysely lähetetty onnistuneesti!</div>';    
+    }
+   $selectedID = isset($lajinro) ? $lajinro : 0;
 
-//$selectedID = isset($etunimi) ? $etunimi : 0;
-?> 
+?>     
 
             </div>
           </div>

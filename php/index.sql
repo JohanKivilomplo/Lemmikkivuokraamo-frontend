@@ -35,16 +35,13 @@ FOREIGN KEY (lajinro) REFERENCES LAJI(lajinro)
 
 CREATE table VUOKRA (
     vuokrausnro INT PRIMARY KEY AUTO_INCREMENT,
-    asiakasnro INT NOT NULL,
     etunimi VARCHAR(100) NOT NULL,
     sukunimi VARCHAR(100) NOT NULL,
     apvm DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     lpvm DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     lisatietoa TEXT NOT NULL, 
     lajinro INT NOT NULL,
-    UNIQUE(vuokrausnro),
-FOREIGN KEY (asiakasnro) REFERENCES ASIAKAS(asiakasnro),
-FOREIGN KEY (lajinro) REFERENCES LAJI(lajinro)
+    UNIQUE(vuokrausnro)
 );
 
 CREATE TABLE KAMPPANJA (

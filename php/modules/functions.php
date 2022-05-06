@@ -235,4 +235,29 @@ function addFeedback($palautenro, $etunimi, $sukunimi, $sahkoposti, $puhelinnro,
     }
 
 }
+
+
+function addVuokra($vuokrausnro, $etunimi, $sukunimi, $apvm, $lpvm, $lisatietoa, $lajinro) {
+    require_once MODULES_DIR.'db.php';
+
+    if( !isset($etunimi) || !isset($sukunimi) || !isset($apvm) || !isset($lpvm) || !isset($lisatietoa)|| !isset($lajinro) ){
+        echo "Kyselyä ei voitu lähettää, tarkista syöttämäsi tiedot";
+        exit;
+    }
+
+    try{
+        $pdo = openDb();
+        $sql = "INSERT INTO vuokra (vuokrausnro, etunimi, sukunimi, apvm, lpvm, lisatietoa, lajinro) 
+        VALUES (?,?,?,?,?,?,?)";
+        $statement = $pdo->prepare($sql);
+        $statement->execute( array($vuokrausnro, $etunimi, $sukunimi, $apvm, $lpvm, $lisatietoa, $lajinro) );
+
+        echo "Kysely lähetetty!";
+    }catch(PDOException $e){
+        echo "Kyselyä ei lähetetty, tarkista tiedot";
+        echo $e->getMessage();
+    }
+
+}
+
 ?>
