@@ -20,7 +20,6 @@
 include MODULES_DIR."person.php";
 
 $id = filter_input(INPUT_GET, "asiakasnro");
-// If id parameter exists -> delete
 if(isset($id)){
     try{
         deletePerson($id);
@@ -30,9 +29,9 @@ if(isset($id)){
     }
     
 }
-// Get all people from database
+// Hae asiakkaat kannasta
 $people = getPeople();
-// Print person list
+// Tulosta asiakkaat
 echo "<ul>";
 foreach($people as $p){
     echo "<li>".$p["etunimi"]." ".$p["sukunimi"].'<a href="asiakkaat.php?asiakasnro=' . $p["asiakasnro"] . '" class="btn btn-primary">Delete</a> </li>';
