@@ -83,7 +83,10 @@
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Some article description stuff.</p>
+                    <p>Some article description stuff.
+                    <img src="lemminkäinen/kuvat/kultainennoutaja.jpg">
+
+                    </p>
                   </div>
 
 
@@ -187,8 +190,6 @@
             <div class="elain m-4">
               <p>Linnut</p>
               <div class="cards">
-              <div class="card">
-                    <p>
                       <?php
                       function getLeila(){
                         require_once '../php/modules/db.php';
@@ -206,10 +207,8 @@
                         }
                     }
                     ?>
-                    </p>
                   <?php $LEILA = getLeila() ?>
 
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                       <?php             
@@ -220,8 +219,8 @@
                     <p>Some article description stuff.</p>
                   </div>
 
-                  <div class="card">
-                    <p>
+
+                  <div class="cards">
                       <?php
                       function getTommi(){
                         require_once '../php/modules/db.php';
@@ -239,10 +238,8 @@
                         }
                     }
                     ?>
-                    </p>
                   <?php $TOMMI = getTommi() ?>
 
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                       <?php             
@@ -252,15 +249,13 @@
                       </a></h2>
                     <p>Some article description stuff.</p>
                   </div>
-
+                  </div>
               </div>
-          </div>
+
 
             <div class="elain m-4">
               <p>Lampaat ja vuohet</p>
               <div class="cards">
-              <div class="card">
-                    <p>
                       <?php
                       function getEsteri(){
                         require_once '../php/modules/db.php';
@@ -278,10 +273,8 @@
                         }
                     }
                     ?>
-                    </p>
                   <?php $ESTERI = getEsteri() ?>
 
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                       <?php             
@@ -292,8 +285,8 @@
                     <p>Some article description stuff.</p>
                   </div>
 
-                <div class="card">
-                    <p>
+
+                  <div class="cards">
                       <?php
                       function getLucifer(){
                         require_once '../php/modules/db.php';
@@ -311,10 +304,8 @@
                         }
                     }
                     ?>
-                    </p>
                   <?php $LUCIFER = getLucifer() ?>
 
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                       <?php             
@@ -325,6 +316,7 @@
                     <p>Some article description stuff.</p>
                   </div>
 
+                  </div>
               </div>
           </div>
 
