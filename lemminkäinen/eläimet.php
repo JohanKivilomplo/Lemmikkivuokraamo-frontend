@@ -157,9 +157,12 @@
               </div>
           </div>
 
+          <div class="container">
+        <div class="row">
+          <div class="col-4" class="header">
             <div class="elain m-4">
               <p>Linnut</p>
-              <div class="cards">
+                <div class="cards">
                       <?php
                       function getLeila(){
                         require_once '../php/modules/db.php';
@@ -178,21 +181,20 @@
                     }
                     ?>
                   <?php $LEILA = getLeila() ?>
-
                   <div class="card">
                     <h2><a href="#">
-                    <img id="korttikuva" src="../lemminkäinen/kuvat/papukaija.jpg">
-
+                      <img id="korttikuva" src="../lemminkäinen/kuvat/papukaija.jpg">
                       <?php             
                       foreach($LEILA as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Some article description stuff.</p>
+                    <p>Some article description stuff.ujl
+
+                    </p>
                   </div>
 
 
-                  <div class="cards">
                       <?php
                       function getTommi(){
                         require_once '../php/modules/db.php';
@@ -215,7 +217,6 @@
                   <div class="card">
                     <h2><a href="#">
                     <img id="korttikuva" src="../lemminkäinen/kuvat/tirppa.jpg">
-
                       <?php             
                       foreach($TOMMI as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
@@ -223,9 +224,11 @@
                       </a></h2>
                     <p>Some article description stuff.</p>
                   </div>
-                  </div>
-              </div>
 
+                 
+
+                </div>
+            </div>
 
             <div class="elain m-4">
               <p>Lampaat ja vuohet</p>
@@ -261,8 +264,6 @@
                     <p>Some article description stuff.</p>
                   </div>
 
-
-                  <div class="cards">
                       <?php
                       function getLucifer(){
                         require_once '../php/modules/db.php';
@@ -281,7 +282,6 @@
                     }
                     ?>
                   <?php $LUCIFER = getLucifer() ?>
-
                   <div class="card">
                     <h2><a href="#">
                     <img id="korttikuva" src="../lemminkäinen/kuvat/afrikanpikkuvuohi.jpg">
@@ -293,17 +293,35 @@
                       </a></h2>
                     <p>Some article description stuff.</p>
                   </div>
-
-                  </div>
+                
               </div>
           </div>
-
             
 
-        <div class="elain m-4">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="container">
+        <div class="row">
+          <div class="col-4" class="header">
+            <div class="elain m-4">
               <p>Hevoset ja ponit</p>
-              <div class="cards">
-                    
+                <div class="cards">
                       <?php
                       function getJoni(){
                         require_once '../php/modules/db.php';
@@ -321,24 +339,21 @@
                         }
                     }
                     ?>
-                    
                   <?php $JONI = getJoni() ?>
-
-                  </div>
                   <div class="card">
                     <h2><a href="#">
-                    <img id="korttikuva" src="../lemminkäinen/kuvat/shetlanninponi1.jpg">
-
+                      <img id="korttikuva" src="../lemminkäinen/kuvat/shetlanninponi1.jpg">
                       <?php             
                       foreach($JONI as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Some article description stuff.</p>
+                    <p>Some article description stuff.ujl
+
+                    </p>
                   </div>
 
-                <div class="card">
-                    
+
                       <?php
                       function getPertti(){
                         require_once '../php/modules/db.php';
@@ -356,14 +371,11 @@
                         }
                     }
                     ?>
-                    
                   <?php $PERTTI = getPertti() ?>
 
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                     <img id="korttikuva" src="../lemminkäinen/kuvat/friisilainen.jpg">
-
                       <?php             
                       foreach($PERTTI as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
@@ -372,9 +384,7 @@
                     <p>Some article description stuff.</p>
                   </div>
 
-                <div class="card">
-                    
-                      <?php
+                  <?php
                       function getFreya(){
                         require_once '../php/modules/db.php';
 
@@ -391,14 +401,11 @@
                         }
                     }
                     ?>
-                    
                   <?php $FREYA = getFreya() ?>
 
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                     <img id="korttikuva" src="../lemminkäinen/kuvat/suomenhevonen.jpg">
-
                       <?php             
                       foreach($FREYA as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
@@ -406,15 +413,13 @@
                       </a></h2>
                     <p>Some article description stuff.</p>
                   </div>
-                
-              </div>
-          </div>
+
+                </div>
+            </div>
 
             <div class="elain m-4">
               <p>Kilpikonnat</p>
               <div class="cards">
-              <div class="card">
-                    
                       <?php
                       function getMarko(){
                         require_once '../php/modules/db.php';
@@ -432,10 +437,8 @@
                         }
                     }
                     ?>
-                    
                   <?php $MARKO = getMarko() ?>
 
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                     <img id="korttikuva" src="../lemminkäinen/kuvat/nelivarvaskilpikonna.jpg">
@@ -448,8 +451,6 @@
                     <p>Some article description stuff.</p>
                   </div>
 
-                  <div class="card">
-                    
                       <?php
                       function getKalle(){
                         require_once '../php/modules/db.php';
@@ -467,10 +468,7 @@
                         }
                     }
                     ?>
-                    
                   <?php $KALLE = getKalle() ?>
-
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                     <img id="korttikuva" src="../lemminkäinen/kuvat/punakorvakilpikonna.jpg">
@@ -482,6 +480,9 @@
                       </a></h2>
                     <p>Some article description stuff.</p>
                   </div>
+                
+              </div>
+          </div>
                   
                 </div>
             </div>
