@@ -303,8 +303,7 @@
         <div class="elain m-4">
               <p>Hevoset ja ponit</p>
               <div class="cards">
-                <div class="card">
-                    <p>
+                    
                       <?php
                       function getJoni(){
                         require_once '../php/modules/db.php';
@@ -322,7 +321,7 @@
                         }
                     }
                     ?>
-                    </p>
+                    
                   <?php $JONI = getJoni() ?>
 
                   </div>
@@ -339,7 +338,7 @@
                   </div>
 
                 <div class="card">
-                    <p>
+                    
                       <?php
                       function getPertti(){
                         require_once '../php/modules/db.php';
@@ -357,7 +356,7 @@
                         }
                     }
                     ?>
-                    </p>
+                    
                   <?php $PERTTI = getPertti() ?>
 
                   </div>
@@ -374,7 +373,7 @@
                   </div>
 
                 <div class="card">
-                    <p>
+                    
                       <?php
                       function getFreya(){
                         require_once '../php/modules/db.php';
@@ -392,7 +391,7 @@
                         }
                     }
                     ?>
-                    </p>
+                    
                   <?php $FREYA = getFreya() ?>
 
                   </div>
@@ -415,7 +414,7 @@
               <p>Kilpikonnat</p>
               <div class="cards">
               <div class="card">
-                    <p>
+                    
                       <?php
                       function getMarko(){
                         require_once '../php/modules/db.php';
@@ -433,7 +432,7 @@
                         }
                     }
                     ?>
-                    </p>
+                    
                   <?php $MARKO = getMarko() ?>
 
                   </div>
@@ -450,7 +449,7 @@
                   </div>
 
                   <div class="card">
-                    <p>
+                    
                       <?php
                       function getKalle(){
                         require_once '../php/modules/db.php';
@@ -468,7 +467,7 @@
                         }
                     }
                     ?>
-                    </p>
+                    
                   <?php $KALLE = getKalle() ?>
 
                   </div>

@@ -132,3 +132,8 @@ h3{
     padding-left: 10%;
     padding-right: 10%;
 }
+
+#korttikuva {
+    max-width: 400px;
+    max-height: 200px;
+}
