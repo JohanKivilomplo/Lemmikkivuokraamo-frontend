@@ -83,7 +83,7 @@
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Some article description stuff.
+                    <p>Some article description stuff.ujl
                     <img src="lemminkäinen/kuvat/kultainennoutaja.jpg">
 
                     </p>
