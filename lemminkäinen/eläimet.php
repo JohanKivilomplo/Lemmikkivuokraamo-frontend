@@ -76,6 +76,7 @@
 
                   <div class="card">
                     <h2><a href="#">
+                    <img id="korttikuva" src="../lemminkäinen/kuvat/mayrakoira.jpg">
                       <?php             
                       foreach($BENJAMIN as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
@@ -113,6 +114,8 @@
 
                   <div class="card">
                     <h2><a href="#">
+                    <img id="korttikuva" src="../lemminkäinen/kuvat/sfinx.jpg">
+
                       <?php             
                       foreach($JOHAN as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
@@ -141,6 +144,8 @@
                   <?php $LIISA = getLiisa() ?>
                   <div class="card">
                     <h2><a href="#">
+                    <img id="korttikuva" src="../lemminkäinen/kuvat/ragdoll.jpg">
+
                       <?php             
                       foreach($LIISA as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
@@ -176,6 +181,8 @@
 
                   <div class="card">
                     <h2><a href="#">
+                    <img id="korttikuva" src="../lemminkäinen/kuvat/papukaija.jpg">
+
                       <?php             
                       foreach($LEILA as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
@@ -207,6 +214,8 @@
 
                   <div class="card">
                     <h2><a href="#">
+                    <img id="korttikuva" src="../lemminkäinen/kuvat/tirppa.jpg">
+
                       <?php             
                       foreach($TOMMI as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
@@ -242,6 +251,8 @@
 
                   <div class="card">
                     <h2><a href="#">
+                    <img id="korttikuva" src="../lemminkäinen/kuvat/suomenlammas.jpg">
+
                       <?php             
                       foreach($ESTERI as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
@@ -273,6 +284,8 @@
 
                   <div class="card">
                     <h2><a href="#">
+                    <img id="korttikuva" src="../lemminkäinen/kuvat/afrikanpikkuvuohi.jpg">
+
                       <?php             
                       foreach($LUCIFER as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
@@ -315,6 +328,8 @@
                   </div>
                   <div class="card">
                     <h2><a href="#">
+                    <img id="korttikuva" src="../lemminkäinen/kuvat/shetlanninponi1.jpg">
+
                       <?php             
                       foreach($JONI as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
@@ -348,6 +363,8 @@
                   </div>
                   <div class="card">
                     <h2><a href="#">
+                    <img id="korttikuva" src="../lemminkäinen/kuvat/friisilainen.jpg">
+
                       <?php             
                       foreach($PERTTI as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
@@ -381,6 +398,8 @@
                   </div>
                   <div class="card">
                     <h2><a href="#">
+                    <img id="korttikuva" src="../lemminkäinen/kuvat/suomenhevonen.jpg">
+
                       <?php             
                       foreach($FREYA as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
@@ -420,6 +439,8 @@
                   </div>
                   <div class="card">
                     <h2><a href="#">
+                    <img id="korttikuva" src="../lemminkäinen/kuvat/nelivarvaskilpikonna.jpg">
+
                       <?php             
                       foreach($MARKO as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
@@ -453,6 +474,8 @@
                   </div>
                   <div class="card">
                     <h2><a href="#">
+                    <img id="korttikuva" src="../lemminkäinen/kuvat/punakorvakilpikonna.jpg">
+
                       <?php             
                       foreach($KALLE as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";

@@ -126,3 +126,8 @@ h3{
 #ostoskoriImg{ 
     float:center; 
 }
+
+#korttikuva {
+    max-width: 200px;
+    max-height: 400px;
+}
