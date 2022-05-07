@@ -128,14 +128,7 @@ h3{
 #ostoskoriImg{ 
     float:center; 
 }
-<<<<<<< HEAD
-
-#korttikuva {
-    max-width: 200px;
-    max-height: 400px;
-=======
 .form-group{
     padding-left: 10%;
     padding-right: 10%;
->>>>>>> 30791d892dc68cce124c21ae6a69fa5277fe5d0f
 }
