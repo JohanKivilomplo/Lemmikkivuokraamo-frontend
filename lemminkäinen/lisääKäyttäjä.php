@@ -41,7 +41,7 @@ include MODULES_DIR.'person.php';
       if(isset($fname)){
           try{
               addPerson($fname, $lname, $email, $puhnro, $osoite, $postinro, $postitmp, $uname, $pw);
-              echo '<div class="alert alert-success" role="alert">Person added!!</div>';
+              echo '<div class="alert alert-success" role="alert">Käyttäjätunnus lisätty!</div>';
           }catch(Exception $e){
               echo '<div class="alert alert-danger" role="alert">'.$e->getMessage().'</div>';
           }

@@ -7,7 +7,7 @@
         logout();
         header("Location: ../index.php");
     }else{
-        echo '<div class="alert alert-success" role="alert">Logged out!!</div>';
+        echo '<div class="alert alert-success" role="alert">Kirjauduit ulos.</div>';
     }
 
 ?>

@@ -62,7 +62,7 @@ function addPerson($fname, $lname, $email, $puhnro, $osoite, $postinro, $postitm
         
         //Tarkistetaan onko muttujia asetettu
         if( !isset($id) ){
-            throw new Exception("Missing parameters! Cannot delete person!");
+            throw new Exception("Ei voida poistaa asiakasta!");
         }
         
         try{

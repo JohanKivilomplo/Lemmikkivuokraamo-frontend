@@ -13,7 +13,7 @@ function login($uname, $pw){
 
     //Tarkistetaan, ettei tyhjiä arvoja muuttujissa
     if( empty($uname) || empty($pw) ){
-        throw new Exception("Cannot log in with empty values.");
+        throw new Exception("Et voi kirjautua sisään tyhjillä arvoilla.");
     }
 
     try{
@@ -25,14 +25,14 @@ function login($uname, $pw){
         $statement->execute();
 
         if($statement->rowCount() <=0){
-            throw new Exception("Person not found! Cannot log in!");
+            throw new Exception("Käyttäjätunnusta ei löydy");
         }
 
         $row = $statement->fetch();
 
         //Tarkistetaan käyttäjän antama salasana tietokannan salasanaa vasten
         if(!password_verify($pw, $row["salasana"] )){
-            throw new Exception("Wrong password!!");
+            throw new Exception("Salasana on väärin!");
         }
 
         //Jos käyttäjä tunnistettu, talletetaan käyttäjän tiedot sessioon
