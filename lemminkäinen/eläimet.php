@@ -187,8 +187,6 @@
             <div class="elain m-4">
               <p>Linnut</p>
               <div class="cards">
-              <div class="card">
-                    <p>
                       <?php
                       function getLeila(){
                         require_once '../php/modules/db.php';
@@ -206,10 +204,8 @@
                         }
                     }
                     ?>
-                    </p>
                   <?php $LEILA = getLeila() ?>
 
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                       <?php             
@@ -220,8 +216,6 @@
                     <p>Some article description stuff.</p>
                   </div>
 
-                  <div class="card">
-                    <p>
                       <?php
                       function getTommi(){
                         require_once '../php/modules/db.php';
@@ -239,10 +233,7 @@
                         }
                     }
                     ?>
-                    </p>
                   <?php $TOMMI = getTommi() ?>
-
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                       <?php             
@@ -259,8 +250,6 @@
             <div class="elain m-4">
               <p>Lampaat ja vuohet</p>
               <div class="cards">
-              <div class="card">
-                    <p>
                       <?php
                       function getEsteri(){
                         require_once '../php/modules/db.php';
@@ -278,10 +267,7 @@
                         }
                     }
                     ?>
-                    </p>
                   <?php $ESTERI = getEsteri() ?>
-
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                       <?php             
@@ -291,9 +277,6 @@
                       </a></h2>
                     <p>Some article description stuff.</p>
                   </div>
-
-                <div class="card">
-                    <p>
                       <?php
                       function getLucifer(){
                         require_once '../php/modules/db.php';
@@ -311,10 +294,8 @@
                         }
                     }
                     ?>
-                    </p>
                   <?php $LUCIFER = getLucifer() ?>
 
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                       <?php             
@@ -333,8 +314,6 @@
         <div class="elain m-4">
               <p>Hevoset ja ponit</p>
               <div class="cards">
-                <div class="card">
-                    <p>
                       <?php
                       function getJoni(){
                         require_once '../php/modules/db.php';
@@ -355,7 +334,6 @@
                     </p>
                   <?php $JONI = getJoni() ?>
 
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                       <?php             
@@ -366,8 +344,6 @@
                     <p>Some article description stuff.</p>
                   </div>
 
-                <div class="card">
-                    <p>
                       <?php
                       function getPertti(){
                         require_once '../php/modules/db.php';
@@ -385,10 +361,8 @@
                         }
                     }
                     ?>
-                    </p>
                   <?php $PERTTI = getPertti() ?>
 
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                       <?php             
@@ -398,9 +372,6 @@
                       </a></h2>
                     <p>Some article description stuff.</p>
                   </div>
-
-                <div class="card">
-                    <p>
                       <?php
                       function getFreya(){
                         require_once '../php/modules/db.php';
@@ -418,10 +389,8 @@
                         }
                     }
                     ?>
-                    </p>
                   <?php $FREYA = getFreya() ?>
 
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                       <?php             
@@ -438,8 +407,6 @@
             <div class="elain m-4">
               <p>Kilpikonnat</p>
               <div class="cards">
-              <div class="card">
-                    <p>
                       <?php
                       function getMarko(){
                         require_once '../php/modules/db.php';
@@ -457,10 +424,8 @@
                         }
                     }
                     ?>
-                    </p>
                   <?php $MARKO = getMarko() ?>
 
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                       <?php             
@@ -471,8 +436,6 @@
                     <p>Some article description stuff.</p>
                   </div>
 
-                  <div class="card">
-                    <p>
                       <?php
                       function getKalle(){
                         require_once '../php/modules/db.php';
@@ -490,10 +453,8 @@
                         }
                     }
                     ?>
-                    </p>
                   <?php $KALLE = getKalle() ?>
 
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                       <?php             

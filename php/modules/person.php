@@ -5,9 +5,9 @@ function getPeople(){
 
     try{
         $pdo = openDb();
-        // Create SQL query to get all rows from a table
+        // Hae kaikki asiakkaat
         $sql = "SELECT * FROM ASIAKAS";
-        // Execute the query
+        // Suorita sql
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -67,13 +67,13 @@ function addPerson($fname, $lname, $email, $puhnro, $osoite, $postinro, $postitm
         
         try{
             $pdo = openDb();
-            // Start transaction
+            // Transaction
             $pdo->beginTransaction();
             $sql = "DELETE FROM VUOKRA WHERE asiakasnro = ?";
             $statement = $pdo->prepare($sql);
             $statement->bindParam(1, $id);        
             $statement->execute();
-            // Delete from person table
+            // Poistetaan asiakas
             $sql = "DELETE FROM ASIAKAS WHERE asiakasnro = ?";
             $statement = $pdo->prepare($sql);
             $statement->bindParam(1, $id);        
@@ -81,7 +81,7 @@ function addPerson($fname, $lname, $email, $puhnro, $osoite, $postinro, $postitm
             // Commit transaction
             $pdo->commit();
         }catch(PDOException $e){
-            // Rollback transaction on error
+            // Rollback
             $pdo->rollBack();
             throw $e;
         }

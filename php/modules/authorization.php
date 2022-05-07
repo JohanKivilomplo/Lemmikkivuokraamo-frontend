@@ -3,9 +3,6 @@ function login($uname, $pw){
 
     require_once MODULES_DIR. 'db.php';
 
-    // $uname = filter_input(INPUT_POST, "username");
-    // $pw = filter_input(INPUT_POST, "password");
-
     //Tarkistetaan onko muttujia asetettu
     if( !isset($uname) || !isset($pw) ){
         throw new Exception("Missing parameters. Cannot log in.");

@@ -6,7 +6,6 @@ function getDogProducts(){
         $pdo = openDb();
         // Create SQL query to get all rows from a table
         $sql = "SELECT * FROM oheistuotteet WHERE lajinro = 1";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -22,7 +21,6 @@ function getDog(){
         $pdo = openDb();
         // Create SQL query to get all rows from a table
         $sql = "SELECT * FROM LAJI WHERE lajinro = 1";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -38,7 +36,6 @@ function getCat(){
         $pdo = openDb();
         // Create SQL query to get all rows from a table
         $sql = "SELECT * FROM LAJI WHERE lajinro = 2";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -54,7 +51,6 @@ function getCatProducts(){
         $pdo = openDb();
         // Create SQL query to get all rows from a table
         $sql = "SELECT * FROM oheistuotteet WHERE lajinro = 2";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -70,7 +66,6 @@ function getTurtle(){
         $pdo = openDb();
         // Create SQL query to get all rows from a table
         $sql = "SELECT * FROM LAJI WHERE lajinro = 3";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -86,7 +81,6 @@ function getTurtleProducts(){
         $pdo = openDb();
         // Create SQL query to get all rows from a table
         $sql = "SELECT * FROM oheistuotteet WHERE lajinro = 3";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -102,7 +96,6 @@ function getBird(){
         $pdo = openDb();
         // Create SQL query to get all rows from a table
         $sql = "SELECT * FROM LAJI WHERE lajinro = 4";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -118,7 +111,6 @@ function getBirdProducts(){
         $pdo = openDb();
         // Create SQL query to get all rows from a table
         $sql = "SELECT * FROM oheistuotteet WHERE lajinro = 4";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -134,7 +126,6 @@ function getSheep(){
         $pdo = openDb();
         // Create SQL query to get all rows from a table
         $sql = "SELECT * FROM LAJI WHERE lajinro = 5";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -150,7 +141,6 @@ function getSheepProducts(){
         $pdo = openDb();
         // Create SQL query to get all rows from a table
         $sql = "SELECT * FROM oheistuotteet WHERE lajinro = 5";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -167,7 +157,6 @@ function getHorse(){
         $pdo = openDb();
         // Create SQL query to get all rows from a table
         $sql = "SELECT * FROM LAJI WHERE lajinro = 6";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -181,9 +170,8 @@ function getHorseProducts(){
 
     try{
         $pdo = openDb();
-        // Create SQL query to get all rows from a table
+        // Nouda kaikki tuotteet jonka lajinro on 6
         $sql = "SELECT * FROM oheistuotteet WHERE lajinro = 6";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -197,9 +185,8 @@ function getDogCampaigns(){
 
     try{
         $pdo = openDb();
-        // Create SQL query to get all rows from a table
+        // Nouda kaikki tuotteet jonka lajinro on 1
         $sql = "SELECT * FROM KAMPPANJA WHERE lajinro = 1";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -213,9 +200,8 @@ function getCatCampaigns(){
 
     try{
         $pdo = openDb();
-        // Create SQL query to get all rows from a table
+        // Nouda kaikki tuotteet jonka lajinro on 2
         $sql = "SELECT * FROM KAMPPANJA WHERE lajinro = 2";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -230,9 +216,8 @@ function getTurtleCampaigns(){
 
     try{
         $pdo = openDb();
-        // Create SQL query to get all rows from a table
+        // Nouda kaikki tuotteet jonka lajinro on 3
         $sql = "SELECT * FROM KAMPPANJA WHERE lajinro = 3";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -246,9 +231,8 @@ function getBirdCampaigns(){
 
     try{
         $pdo = openDb();
-        // Create SQL query to get all rows from a table
+        // Nouda kaikki tuotteet jonka lajinro on 4
         $sql = "SELECT * FROM KAMPPANJA WHERE lajinro = 4";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -262,9 +246,8 @@ function getSheepCampaigns(){
 
     try{
         $pdo = openDb();
-        // Create SQL query to get all rows from a table
+        // Nouda kaikki tuotteet jonka lajinro on 5
         $sql = "SELECT * FROM KAMPPANJA WHERE lajinro = 5";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
@@ -278,9 +261,8 @@ function getHorseCampaigns(){
 
     try{
         $pdo = openDb();
-        // Create SQL query to get all rows from a table
+        // Nouda kaikki tuotteet jonka lajinro on 6
         $sql = "SELECT * FROM KAMPPANJA WHERE lajinro = 6";
-        // Execute the query
         $people = $pdo->query($sql);
 
         return $people->fetchAll();
