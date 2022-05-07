@@ -78,13 +78,13 @@
                   <?php $CARITA = getCarita() ?>
                   <div class="card">
                     <h2><a href="#">
+                      <img id="korttikuva" src="../lemminkäinen/kuvat/kultainennoutaja.jpg">
                       <?php             
                       foreach($CARITA as $a){
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
                     <p>Some article description stuff.ujl
-                    <img src="lemminkäinen/kuvat/kultainennoutaja.jpg">
 
                     </p>
                   </div>
