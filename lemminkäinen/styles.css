@@ -126,3 +126,7 @@ h3{
 #ostoskoriImg{ 
     float:center; 
 }
+.form-group{
+    padding-left: 10%;
+    padding-right: 10%;
+}
