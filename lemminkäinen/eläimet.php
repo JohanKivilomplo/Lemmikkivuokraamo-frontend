@@ -49,7 +49,7 @@
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Some article description stuff.ujl
+                    <p>Kukapa ei tykkäisi koirista ja vieläpä kultaisestanoutajasta! Tässä meidän 2-vuotias hellyyttävä Carita.
 
                     </p>
                   </div>
@@ -82,7 +82,7 @@
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Some article description stuff.</p>
+                    <p>Pienempien koirien ystäville 3-vuotias Benjamin on oiva valinta!</p>
                   </div>
 
                  
@@ -121,7 +121,7 @@
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Some article description stuff.</p>
+                    <p>Jos et halua karvoja kotiisi, valitse Johan-kissa! Johan on 1-vuotias.</p>
                   </div>
 
                       <?php
@@ -151,7 +151,7 @@
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Some article description stuff.</p>
+                    <p>Liisa on 4-vuotias pitkäkarvainen laiskiainen (kissa).</p>
                   </div>
                 
               </div>
@@ -189,7 +189,7 @@
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Some article description stuff.ujl
+                    <p>Jos kaipaat juttuseuraa, valitse Leila!
 
                     </p>
                   </div>
@@ -222,7 +222,7 @@
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Some article description stuff.</p>
+                    <p>Tommi on... Noh, Tommi-tirppa.</p>
                   </div>
 
                  
@@ -261,7 +261,7 @@
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Some article description stuff.</p>
+                    <p>Esteri on komea suomenlammas!</p>
                   </div>
 
                       <?php
@@ -291,31 +291,12 @@
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Some article description stuff.</p>
+                    <p>Lucifer on pieni ja pippurinen vuohi. Varo ettei pökkää.</p>
                   </div>
                 
               </div>
           </div>
             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           <div class="container">
         <div class="row">
           <div class="col-4" class="header">
@@ -348,7 +329,7 @@
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Some article description stuff.ujl
+                    <p>Joni-poni on hauska kaveri viedä vaikka lenkille!
 
                     </p>
                   </div>
@@ -381,7 +362,7 @@
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Some article description stuff.</p>
+                    <p>Pertti on iso ja vahva. Ja musta.</p>
                   </div>
 
                   <?php
@@ -411,7 +392,7 @@
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Some article description stuff.</p>
+                    <p>Freya on nätti 7-vuotias suomenhevonen!</p>
                   </div>
 
                 </div>
@@ -448,7 +429,7 @@
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Some article description stuff.</p>
+                    <p>Marko on nimensä mukaisesti muikea. Se tuijottaa muikeasti.</p>
                   </div>
 
                       <?php
@@ -478,7 +459,7 @@
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Some article description stuff.</p>
+                    <p>Kallella on punaiset korvat. Liekö paleltunut viimassa.</p>
                   </div>
                 
               </div>
