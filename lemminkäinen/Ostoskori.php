@@ -73,11 +73,11 @@
           </div>
           <div class="form-group">
             <label for="apvm">Aloituspäivämäärä</label>
-            <input type="apmv" class="form-control" name="apvm" id="apvm" placeholder="DD/MM/YYY">
+            <input type="apmv" class="form-control" name="apvm" id="apvm" placeholder="YYYY/MM/DD">
           </div>
           <div class="form-group">
             <label for="lpvm">Lopetuspäivämäärä</label>
-            <input type="lpvm" class="form-control" name="lpvm" id="lpvm" placeholder="DD/MM/YYY">
+            <input type="lpvm" class="form-control" name="lpvm" id="lpvm" placeholder="YYYY/MM/DD">
           </div>
           <div class="form-group">
             <label for="exampleFormControlTextarea1">Lisätietoa</label>
