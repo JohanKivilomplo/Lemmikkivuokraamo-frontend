@@ -58,8 +58,6 @@
             <div class="elain m-4">
               <p>Koirat</p>
                 <div class="cards">
-                  <div class="card">
-                    <p>
                       <?php
                       function getCarita(){
                         require_once '../php/modules/db.php';
@@ -77,10 +75,7 @@
                         }
                     }
                     ?>
-                    </p>
                   <?php $CARITA = getCarita() ?>
-
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                       <?php             
@@ -91,8 +86,7 @@
                     <p>Some article description stuff.</p>
                   </div>
 
-                  <div class="card">
-                    <p>
+
                       <?php
                       function getBenjamin(){
                         require_once '../php/modules/db.php';
@@ -110,10 +104,8 @@
                         }
                     }
                     ?>
-                    </p>
                   <?php $BENJAMIN = getBenjamin() ?>
 
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                       <?php             
@@ -132,8 +124,6 @@
             <div class="elain m-4">
               <p>Kissat</p>
               <div class="cards">
-              <div class="card">
-                    <p>
                       <?php
                       function getJohan(){
                         require_once '../php/modules/db.php';
@@ -151,10 +141,8 @@
                         }
                     }
                     ?>
-                    </p>
                   <?php $JOHAN = getJohan() ?>
 
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                       <?php             
@@ -165,8 +153,6 @@
                     <p>Some article description stuff.</p>
                   </div>
 
-                  <div class="card">
-                    <p>
                       <?php
                       function getLiisa(){
                         require_once '../php/modules/db.php';
@@ -184,10 +170,7 @@
                         }
                     }
                     ?>
-                    </p>
                   <?php $LIISA = getLiisa() ?>
-
-                  </div>
                   <div class="card">
                     <h2><a href="#">
                       <?php             
