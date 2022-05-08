@@ -22,7 +22,7 @@
             <a class="nav-link " href="../lemminkäinen/lisääKäyttäjä.php">LUO KÄYTTÄJÄTUNNUS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="../lemminkäinen/asiakkaat.php">ASIAKKAAT</a>
+            <a class="nav-link" href="../lemminkäinen/asiakkaat.php">ASIAKKAAT</a>
           </li>
           <li class="nav-item">
             <?php 

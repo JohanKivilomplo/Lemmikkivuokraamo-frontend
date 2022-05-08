@@ -13,7 +13,6 @@
 
     <title>LEMMINKAINEN</title>
 </head>
-http://localhost/Lemmikkivuokraamo-frontend/lemmink%C3%A4inen/oheistuotteet.php
 
 <body>
   <?php require MODULES_DIR.'functions.php'?>
