@@ -137,3 +137,7 @@ h3{
     max-width: 250px;
     max-height: 400px;
 }
+
+.vuokraussivulle {
+    padding: 200px;
+}

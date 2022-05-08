@@ -73,7 +73,7 @@
     <div class="container">
       <div class="row">
         <p>
-        Made by :  OAMK TIETOJENKÄSITTELY 12/2021 
+        Made by :  OAMK TIETOJENKÄSITTELY 5/2022
         </p>
       </div>
     </div>
