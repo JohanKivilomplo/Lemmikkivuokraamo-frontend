@@ -16,7 +16,7 @@
   <?php require '../php/modules/functions.php'?>
   <?php include TEMPLATES_DIR.'nav.php'; ?>
 
-  <button href="../lemminkäinen/Ostoskori.php" class="vuokraussivulle">Vuokraussivulle</button>
+ 
 
     <div class="container">
         <div class="row">
@@ -51,8 +51,10 @@
                       } ?>
                       </a></h2>
                     <p>Kukapa ei tykkäisi koirista ja vieläpä kultaisestanoutajasta! Tässä meidän 2-vuotias hellyyttävä Carita.
-
                     </p>
+                    <a href="../lemminkäinen/Ostoskori.php">
+                       <button> Lähetä vuokrauskysely</button>
+                    </a>
                   </div>
 
 
@@ -84,6 +86,8 @@
                       } ?>
                       </a></h2>
                     <p>Pienempien koirien ystäville 3-vuotias Benjamin on oiva valinta!</p>
+                    <a href="../lemminkäinen/Ostoskori.php">
+                       <button> Lähetä vuokrauskysely</button>
                   </div>
 
                  
@@ -123,6 +127,8 @@
                       } ?>
                       </a></h2>
                     <p>Jos et halua karvoja kotiisi, valitse Johan-kissa! Johan on 1-vuotias.</p>
+                    <a href="../lemminkäinen/Ostoskori.php">
+                       <button> Lähetä vuokrauskysely</button>
                   </div>
 
                       <?php
@@ -153,6 +159,8 @@
                       } ?>
                       </a></h2>
                     <p>Liisa on 4-vuotias pitkäkarvainen laiskiainen (kissa).</p>
+                    <a href="../lemminkäinen/Ostoskori.php">
+                       <button> Lähetä vuokrauskysely</button>
                   </div>
                 
               </div>
@@ -190,9 +198,9 @@
                       echo "<div>" . "<h2>" . $a["tietoa"] . "</h2>" . '</div>'. "</br>";
                       } ?>
                       </a></h2>
-                    <p>Jos kaipaat juttuseuraa, valitse Leila!
-
-                    </p>
+                    <p>Jos kaipaat juttuseuraa, valitse Leila!</p>
+                    <a href="../lemminkäinen/Ostoskori.php">
+                       <button> Lähetä vuokrauskysely</button>
                   </div>
 
 
@@ -224,6 +232,8 @@
                       } ?>
                       </a></h2>
                     <p>Tommi on... Noh, Tommi-tirppa.</p>
+                    <a href="../lemminkäinen/Ostoskori.php">
+                       <button> Lähetä vuokrauskysely</button>
                   </div>
 
                  
@@ -263,6 +273,8 @@
                       } ?>
                       </a></h2>
                     <p>Esteri on komea suomenlammas!</p>
+                    <a href="../lemminkäinen/Ostoskori.php">
+                       <button> Lähetä vuokrauskysely</button>
                   </div>
 
                       <?php
@@ -293,6 +305,8 @@
                       } ?>
                       </a></h2>
                     <p>Lucifer on pieni ja pippurinen vuohi. Varo ettei pökkää.</p>
+                    <a href="../lemminkäinen/Ostoskori.php">
+                       <button> Lähetä vuokrauskysely</button>
                   </div>
                 
               </div>
@@ -331,7 +345,8 @@
                       } ?>
                       </a></h2>
                     <p>Joni-poni on hauska kaveri viedä vaikka lenkille!
-
+                    <a href="../lemminkäinen/Ostoskori.php">
+                       <button> Lähetä vuokrauskysely</button>
                     </p>
                   </div>
 
@@ -364,6 +379,8 @@
                       } ?>
                       </a></h2>
                     <p>Pertti on iso ja vahva. Ja musta.</p>
+                    <a href="../lemminkäinen/Ostoskori.php">
+                       <button> Lähetä vuokrauskysely</button>
                   </div>
 
                   <?php
@@ -394,6 +411,8 @@
                       } ?>
                       </a></h2>
                     <p>Freya on nätti 7-vuotias suomenhevonen!</p>
+                    <a href="../lemminkäinen/Ostoskori.php">
+                       <button> Lähetä vuokrauskysely</button>
                   </div>
 
                 </div>
@@ -431,6 +450,8 @@
                       } ?>
                       </a></h2>
                     <p>Marko on nimensä mukaisesti muikea. Se tuijottaa muikeasti.</p>
+                    <a href="../lemminkäinen/Ostoskori.php">
+                       <button> Lähetä vuokrauskysely</button>
                   </div>
 
                       <?php
@@ -461,6 +482,8 @@
                       } ?>
                       </a></h2>
                     <p>Kallella on punaiset korvat. Liekö paleltunut viimassa.</p>
+                    <a href="../lemminkäinen/Ostoskori.php">
+                       <button> Lähetä vuokrauskysely</button>
                   </div>
                 
               </div>
