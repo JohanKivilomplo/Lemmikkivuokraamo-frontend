@@ -16,7 +16,7 @@
   <?php require '../php/modules/functions.php'?>
   <?php include TEMPLATES_DIR.'nav.php'; ?>
 
-  <button href="index.php" class="vuokraussivulle">Vuokraussivulle</button>
+  <button href="../lemminkäinen/Ostoskori.php" class="vuokraussivulle">Vuokraussivulle</button>
 
     <div class="container">
         <div class="row">
